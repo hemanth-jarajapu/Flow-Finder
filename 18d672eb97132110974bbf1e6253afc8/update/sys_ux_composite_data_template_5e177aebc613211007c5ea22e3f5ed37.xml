@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_composite_data_template">
+    <sys_ux_composite_data_template action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <name>Custom Portal Catalog item page - Related items template</name>
+        <sys_class_name>sys_ux_composite_data_template</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2023-06-14 11:48:10</sys_created_on>
+        <sys_id>5e177aebc613211007c5ea22e3f5ed37</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Custom Portal Catalog item page - Related items template</sys_name>
+        <sys_package display_value="Flow Finder" source="x_350851_flow_fi_0">18d672eb97132110974bbf1e6253afc8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Flow Finder">18d672eb97132110974bbf1e6253afc8</sys_scope>
+        <sys_update_name>sys_ux_composite_data_template_5e177aebc613211007c5ea22e3f5ed37</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2023-06-14 11:48:10</sys_updated_on>
+        <template>{&#13;
+	"component": "now-card-evam-record",&#13;
+	"staticValues": {&#13;
+        "imageType": {&#13;
+            "translatable": false,&#13;
+            "key": "image"&#13;
+        },&#13;
+        "detailLabelOne": {&#13;
+            "translatable": true,&#13;
+            "key": "Summary"&#13;
+        }&#13;
+	},&#13;
+	"mappings": {&#13;
+        "imageURL": "related_sc_cat_item.picture",&#13;
+        "titleLabel": "related_sc_cat_item.name",&#13;
+        "detailValueOne": "related_sc_cat_item.short_description",&#13;
+	"subtitle": "related_sc_cat_item.price"&#13;
+	},&#13;
+ "actionMappings": {&#13;
+		"clickAction": "navigation"&#13;
+	}&#13;
+}</template>
+    </sys_ux_composite_data_template>
+</record_update>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="a23c3f7b97d36110974bbf1e6253af03" label="Flow Finder" max_length="40" name="x_350851_flow_fi_0_flow_finder_form" type="collection">
+        <element choice="3" default="both" label="Active/Inactive" max_length="40" name="active" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Both" sequence="10" value="both"/>
+                <element inactive_on_update="false" label="Active" sequence="20" value="active"/>
+                <element inactive_on_update="false" label="Inactive" sequence="30" value="inactive"/>
+            </choice>
+        </element>
+        <element attributes="ref_auto_completer=AJAXTableCompleter,ref_ac_columns=scope" label="Application" max_length="32" name="application" reference="sys_scope" type="reference"/>
+        <element label="Category" max_length="100" name="category" type="string"/>
+        <element attributes="ref_auto_completer=AJAXTableCompleter,ref_ac_columns=name" label="Table" max_length="32" name="trigger_table" reference="sys_db_object" type="reference"/>
+        <element choice="1" label="Type" max_length="32" name="trigger_type" reference="sys_hub_trigger_definition" reference_qual="categoryISNOTEMPTY^active=true^EQ" reference_qual_condition="categoryISNOTEMPTY^active=true^EQ" type="reference" use_dependent_field="true">
+            <choice/>
+        </element>
+        <element label="Action" max_length="500" name="used_action" type="string"/>
+        <element label="Subflow" max_length="500" name="used_subflow" type="string"/>
+        <element label="Table" max_length="32" name="used_table" reference="sys_db_object" type="reference"/>
+        <index name="index">
+            <element name="application"/>
+        </index>
+        <index name="index2">
+            <element name="trigger_table"/>
+        </index>
+        <index name="index3">
+            <element name="used_table"/>
+        </index>
+    </element>
+</database>

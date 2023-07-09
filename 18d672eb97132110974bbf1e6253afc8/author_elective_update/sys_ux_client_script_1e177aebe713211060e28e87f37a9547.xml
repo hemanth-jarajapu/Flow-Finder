@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="DELETE">
+        <includes/>
+        <macroponent display_value="Landing Page">d6177aeb2b132110cc0109b2ef4e3755</macroponent>
+        <name>Task Approve/Reject</name>
+        <preset/>
+        <required_translations>[ ]</required_translations>
+        <script><![CDATA[/**
+ * @param {params} params
+ * @param {api} params.api
+ * @param {any} params.event
+ * @param {any} params.imports
+ * @param {ApiHelpers} params.helpers
+ */
+function handler({
+    api,
+    event,
+    helpers,
+    imports
+}) {
+    const approveOrReject = event.elementId;
+    if (approveOrReject == 'button_6') {
+        const approveFileds =
+            `state=approved`;
+        api.data.update_record_1.execute({
+            'table': 'sysapproval_approver',
+            'recordId': api.state.taskApproveSysId,
+            'templateFields': approveFileds,
+            'useSetDisplayValue': ''
+        });
+        const modal_payload = {
+            "modalId": "[component-id$='alert_1']",
+            "showModal": true,
+            "displayOptions": null
+        };
+        const OPEN_MODAL = 'MODAL_SELECTED';
+        helpers.timing.setTimeout(() => {
+            api.emit(OPEN_MODAL, modal_payload);
+        }, 500);
+    } else if (approveOrReject == 'button_8') {
+        const rejectedFileds =
+            `state=rejected`;
+        api.data.update_record_1.execute({
+            'table': 'sysapproval_approver',
+            'recordId': api.state.taskRejectedSysId,
+            'templateFields': rejectedFileds,
+            'useSetDisplayValue': ''
+        });
+        const modal_payload = {
+            "modalId": "[component-id$='alert_2']",
+            "showModal": true,
+            "displayOptions": null
+        };
+        const OPEN_MODAL = 'MODAL_SELECTED';
+        helpers.timing.setTimeout(() => {
+            api.emit(OPEN_MODAL, modal_payload);
+        }, 500);
+    }
+    helpers.timing.setTimeout(() => {
+        api.data.evam_mytasks.refresh();
+    }, 500);
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2023-06-14 11:48:10</sys_created_on>
+        <sys_id>1e177aebe713211060e28e87f37a9547</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Task Approve/Reject</sys_name>
+        <sys_package display_value="Flow Finder" source="x_350851_flow_fi_0">18d672eb97132110974bbf1e6253afc8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Flow Finder">18d672eb97132110974bbf1e6253afc8</sys_scope>
+        <sys_update_name>sys_ux_client_script_1e177aebe713211060e28e87f37a9547</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2023-06-14 11:48:10</sys_updated_on>
+        <target/>
+        <type>default</type>
+    </sys_ux_client_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Flow Finder">18d672eb97132110974bbf1e6253afc8</application>
+        <file_path/>
+        <instance_id>1636d6e86f6af900d54da9cc5d3ee472</instance_id>
+        <instance_name>dev10498</instance_name>
+        <name>sys_ux_client_script_1e177aebe713211060e28e87f37a9547</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ux_client_script"&gt;&lt;sys_ux_client_script action="INSERT_OR_UPDATE"&gt;&lt;includes/&gt;&lt;macroponent display_value="Landing Page"&gt;d6177aeb2b132110cc0109b2ef4e3755&lt;/macroponent&gt;&lt;name&gt;Task Approve/Reject&lt;/name&gt;&lt;preset/&gt;&lt;required_translations&gt;[ ]&lt;/required_translations&gt;&lt;script&gt;&lt;![CDATA[/**
+ * @param {params} params
+ * @param {api} params.api
+ * @param {any} params.event
+ * @param {any} params.imports
+ * @param {ApiHelpers} params.helpers
+ */
+function handler({
+    api,
+    event,
+    helpers,
+    imports
+}) {
+    const approveOrReject = event.elementId;
+    if (approveOrReject == 'button_6') {
+        const approveFileds =
+            `state=approved`;
+        api.data.update_record_1.execute({
+            'table': 'sysapproval_approver',
+            'recordId': api.state.taskApproveSysId,
+            'templateFields': approveFileds,
+            'useSetDisplayValue': ''
+        });
+        const modal_payload = {
+            "modalId": "[component-id$='alert_1']",
+            "showModal": true,
+            "displayOptions": null
+        };
+        const OPEN_MODAL = 'MODAL_SELECTED';
+        helpers.timing.setTimeout(() =&gt; {
+            api.emit(OPEN_MODAL, modal_payload);
+        }, 500);
+    } else if (approveOrReject == 'button_8') {
+        const rejectedFileds =
+            `state=rejected`;
+        api.data.update_record_1.execute({
+            'table': 'sysapproval_approver',
+            'recordId': api.state.taskRejectedSysId,
+            'templateFields': rejectedFileds,
+            'useSetDisplayValue': ''
+        });
+        const modal_payload = {
+            "modalId": "[component-id$='alert_2']",
+            "showModal": true,
+            "displayOptions": null
+        };
+        const OPEN_MODAL = 'MODAL_SELECTED';
+        helpers.timing.setTimeout(() =&gt; {
+            api.emit(OPEN_MODAL, modal_payload);
+        }, 500);
+    }
+    helpers.timing.setTimeout(() =&gt; {
+        api.data.evam_mytasks.refresh();
+    }, 500);
+}]]&gt;&lt;/script&gt;&lt;script_api_version&gt;2.0.0&lt;/script_api_version&gt;&lt;sys_class_name&gt;sys_ux_client_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;system&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2023-06-14 11:48:10&lt;/sys_created_on&gt;&lt;sys_id&gt;1e177aebe713211060e28e87f37a9547&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Task Approve/Reject&lt;/sys_name&gt;&lt;sys_package display_value="Flow Finder" source="x_350851_flow_fi_0"&gt;18d672eb97132110974bbf1e6253afc8&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Flow Finder"&gt;18d672eb97132110974bbf1e6253afc8&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ux_client_script_1e177aebe713211060e28e87f37a9547&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;system&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2023-06-14 11:48:10&lt;/sys_updated_on&gt;&lt;target/&gt;&lt;type&gt;default&lt;/type&gt;&lt;/sys_ux_client_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1368396233</payload_hash>
+        <record_name>Task Approve/Reject</record_name>
+        <reverted_from/>
+        <source>d4d672eb97132110974bbf1e6253afca</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2023-06-14 11:48:19</sys_created_on>
+        <sys_id>89273eeb97132110974bbf1e6253af75</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>188b9bc36970000001</sys_recorded_at>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2023-06-14 11:48:19</sys_updated_on>
+        <type>UX Client Script</type>
+        <update_guid>01273eeb17132110b2bc3f53d9c3ca75</update_guid>
+        <update_guid_history>01273eeb17132110b2bc3f53d9c3ca75:1368396233</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-06-14 12:53:19</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_client_script">sys_ux_client_script</sys_db_object>
+        <sys_id>6a8dae1112314d079e7399236023ff21</sys_id>
+        <sys_metadata>1e177aebe713211060e28e87f37a9547</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Task Approve/Reject</sys_name>
+        <sys_package display_value="Flow Finder" source="x_350851_flow_fi_0">18d672eb97132110974bbf1e6253afc8</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Flow Finder">18d672eb97132110974bbf1e6253afc8</sys_scope>
+        <sys_scope_delete display_value="">987de73dd51340699b520bfeba7fe469</sys_scope_delete>
+        <sys_update_name>sys_ux_client_script_1e177aebe713211060e28e87f37a9547</sys_update_name>
+        <sys_update_version display_value="sys_ux_client_script_1e177aebe713211060e28e87f37a9547">89273eeb97132110974bbf1e6253af75</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-06-14 12:53:19</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
