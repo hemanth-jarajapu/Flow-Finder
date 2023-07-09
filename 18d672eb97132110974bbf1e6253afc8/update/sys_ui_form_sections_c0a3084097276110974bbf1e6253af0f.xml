@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_form_sections form_id="c0a3084097276110974bbf1e6253af0f" sys_domain="global" table="x_350851_flow_fi_0_flow_finder_form" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-06-15 12:00:59</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d8a3084097276110974bbf1e6253af50</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_350851_flow_fi_0_flow_finder_form" name="x_350851_flow_fi_0_flow_finder_form" sys_domain="global" view="Default view">c0a3084097276110974bbf1e6253af0f</sys_ui_form>
+            <sys_ui_section caption="NULL" display_value="" name="x_350851_flow_fi_0_flow_finder_form" sys_domain="global" view="Default view">43910c8c97e36110974bbf1e6253af2b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-06-15 12:00:59</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-06-15 12:00:59</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>58a3084097276110974bbf1e6253af51</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_350851_flow_fi_0_flow_finder_form" name="x_350851_flow_fi_0_flow_finder_form" sys_domain="global" view="Default view">c0a3084097276110974bbf1e6253af0f</sys_ui_form>
+            <sys_ui_section caption="Trigger Based" display_value="Trigger Based" name="x_350851_flow_fi_0_flow_finder_form" sys_domain="global" view="Default view">08a3084097276110974bbf1e6253af0d</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-06-15 12:00:59</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-06-15 12:00:59</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>58a3084097276110974bbf1e6253af55</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_350851_flow_fi_0_flow_finder_form" name="x_350851_flow_fi_0_flow_finder_form" sys_domain="global" view="Default view">c0a3084097276110974bbf1e6253af0f</sys_ui_form>
+            <sys_ui_section caption="Uses" display_value="Uses" name="x_350851_flow_fi_0_flow_finder_form" sys_domain="global" view="Default view">c0a3084097276110974bbf1e6253af0e</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-06-15 12:00:59</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>x_350851_flow_fi_0_flow_finder_form</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-06-15 12:00:59</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c0a3084097276110974bbf1e6253af0f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_350851_flow_fi_0_flow_finder_form</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Flow Finder" source="x_350851_flow_fi_0">18d672eb97132110974bbf1e6253afc8</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Flow Finder">18d672eb97132110974bbf1e6253afc8</sys_scope>
+            <sys_update_name>sys_ui_form_sections_c0a3084097276110974bbf1e6253af0f</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-06-15 12:00:59</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>

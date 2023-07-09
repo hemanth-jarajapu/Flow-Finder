@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_data_broker_transform">
+    <sys_ux_data_broker_transform action="INSERT_OR_UPDATE">
+        <acl_failure_result/>
+        <api_name>x_350851_flow_fi_0.Flow Search Data Broker</api_name>
+        <description/>
+        <mutates_server_data>false</mutates_server_data>
+        <name>Flow Search Data Broker</name>
+        <output_schema/>
+        <private>false</private>
+        <props>[&#13;
+  {&#13;
+    "label": "Application",&#13;
+    "name": "application",&#13;
+    "description": "Sys ID of the application",&#13;
+    "readOnly": false,&#13;
+    "fieldType": "string",&#13;
+    "mandatory": false,&#13;
+    "defaultValue": ""&#13;
+  },&#13;
+ {&#13;
+    "label": "Table",&#13;
+    "name": "table",&#13;
+    "description": "Sys ID of the table used by the flows",&#13;
+    "readOnly": false,&#13;
+    "fieldType": "string",&#13;
+    "mandatory": false,&#13;
+    "defaultValue": ""&#13;
+  },&#13;
+ {&#13;
+    "label": "Trigger Table",&#13;
+    "name": "trigger_table",&#13;
+    "description": "Sys ID of the table triggering the flows",&#13;
+    "readOnly": false,&#13;
+    "fieldType": "string",&#13;
+    "mandatory": false,&#13;
+    "defaultValue": ""&#13;
+  },&#13;
+ {&#13;
+    "label": "Subflow",&#13;
+    "name": "subflow",&#13;
+    "description": "Sys ID of the subflow used by the flows",&#13;
+    "readOnly": false,&#13;
+    "fieldType": "string",&#13;
+    "mandatory": false,&#13;
+    "defaultValue": ""&#13;
+  },&#13;
+ {&#13;
+    "label": "Action",&#13;
+    "name": "action",&#13;
+    "description": "Sys ID of the action used by the flows",&#13;
+    "readOnly": false,&#13;
+    "fieldType": "string",&#13;
+    "mandatory": false,&#13;
+    "defaultValue": ""&#13;
+  },&#13;
+ {&#13;
+    "label": "Active",&#13;
+    "name": "active",&#13;
+    "description": "",&#13;
+    "readOnly": false,&#13;
+    "fieldType": "string",&#13;
+    "mandatory": false,&#13;
+    "defaultValue": "both"&#13;
+  },&#13;
+{&#13;
+    "label": "Trigger Type",&#13;
+    "name": "trigger_type",&#13;
+    "description": "",&#13;
+    "readOnly": false,&#13;
+    "fieldType": "string",&#13;
+    "mandatory": false,&#13;
+    "defaultValue": ""&#13;
+  }&#13;
+]</props>
+        <required_translations>[ {
+  "message" : "Action",
+  "comment" : ""
+}, {
+  "message" : "Active",
+  "comment" : ""
+}, {
+  "message" : "Application",
+  "comment" : ""
+}, {
+  "message" : "Subflow",
+  "comment" : ""
+}, {
+  "message" : "Sys ID of the action used by the flows",
+  "comment" : ""
+}, {
+  "message" : "Sys ID of the application",
+  "comment" : ""
+}, {
+  "message" : "Sys ID of the subflow used by the flows",
+  "comment" : ""
+}, {
+  "message" : "Sys ID of the table triggering the flows",
+  "comment" : ""
+}, {
+  "message" : "Sys ID of the table used by the flows",
+  "comment" : ""
+}, {
+  "message" : "Table",
+  "comment" : ""
+}, {
+  "message" : "Trigger Table",
+  "comment" : ""
+}, {
+  "message" : "Trigger Type",
+  "comment" : ""
+} ]</required_translations>
+        <schema_version>1.0.0</schema_version>
+        <script><![CDATA[function transform(input) {
+    var application = input.application;
+    var table = input.table;
+    var subflow = input.subflow;
+    var action = input.action;
+    var active = input.active;
+    var trigger_table = input.trigger_table;
+    var trigger_type = input.trigger_type;
+
+    var flows = new GlideRecord("sys_hub_flow");
+    flows.orderBy("name");
+    if (!table && !application && !subflow && !action && !trigger_table && (active == "both") && !trigger_type) {
+        return flows.getEncodedQuery();
+    }
+
+    if (table || subflow || action) {
+        flows.addQuery("label_cacheISNOTEMPTY");
+    }
+    if (table) {
+        var tableGR = new GlideRecord("sys_db_object");
+        if (tableGR.get(table)) {
+            flows.addQuery('^label_cacheLIKE"reference":"' + tableGR.getValue("name") + '"');
+        }
+    }
+    if (subflow) {
+        flows.addQuery("label_cacheLIKE" + subflow);
+    }
+    if (action) {
+        flows.addQuery("label_cacheLIKE" + action);
+    }
+
+    if (application) {
+        flows.addQuery("sys_scope", application);
+    }
+    if (active != "both") {
+        if (active == "active") {
+            flows.addQuery("active", true);
+        } else if (active == "inactive") {
+            flows.addQuery("active", false);
+        }
+    }
+    if (trigger_table) {
+        var tables = new GlideRecord("sys_db_object");
+        if (tables.get(trigger_table)) {
+            var tableTriggeredflowIDs = sn_flow.AssociatedFlows.getFlows(tables.getValue("name"));
+            if (tableTriggeredflowIDs) {
+                flows.addQuery("sys_idIN" + tableTriggeredflowIDs);
+            }
+        }
+    }
+    if (trigger_type) {
+        var triggers = new GlideRecord('sys_hub_trigger_instance');
+        triggers.addQuery('flow.sys_class_name=sys_hub_flow^trigger_definition=' + trigger_type);
+        triggers.query();
+        var flowIDsofType = [];
+        while (triggers.next()) {
+            flowIDsofType.push(triggers.getValue("flow"));
+        }
+
+        //if (flowIDsofType.length > 0) {
+            flows.addQuery("sys_idIN" + flowIDsofType);
+        //}
+    }
+
+    return flows.getEncodedQuery();
+}]]></script>
+        <sys_class_name>sys_ux_data_broker_transform</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-06-27 12:05:32</sys_created_on>
+        <sys_id>dbbf61f797a36110974bbf1e6253af87</sys_id>
+        <sys_mod_count>13</sys_mod_count>
+        <sys_name>Flow Search Data Broker</sys_name>
+        <sys_package display_value="Flow Finder" source="x_350851_flow_fi_0">18d672eb97132110974bbf1e6253afc8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Flow Finder">18d672eb97132110974bbf1e6253afc8</sys_scope>
+        <sys_update_name>sys_ux_data_broker_transform_dbbf61f797a36110974bbf1e6253af87</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-02 11:52:08</sys_updated_on>
+    </sys_ux_data_broker_transform>
+    <sys_translated_text action="delete_multiple" query="documentkey=dbbf61f797a36110974bbf1e6253af87"/>
+</record_update>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="DELETE">
+        <includes/>
+        <macroponent display_value="Landing Page">d6177aeb2b132110cc0109b2ef4e3755</macroponent>
+        <name>close modal</name>
+        <preset/>
+        <required_translations>[ ]</required_translations>
+        <script><![CDATA[/**
+ * @param {params} params
+ * @param {api} params.api
+ * @param {any} params.event
+ * @param {any} params.imports
+ */
+function handler({api, event, helpers, imports}) {
+     helpers.modal.close();
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2023-06-14 11:48:09</sys_created_on>
+        <sys_id>d2177aeb3a132110b1220da513d83441</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>close modal</sys_name>
+        <sys_package display_value="Flow Finder" source="x_350851_flow_fi_0">18d672eb97132110974bbf1e6253afc8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Flow Finder">18d672eb97132110974bbf1e6253afc8</sys_scope>
+        <sys_update_name>sys_ux_client_script_d2177aeb3a132110b1220da513d83441</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2023-06-14 11:48:09</sys_updated_on>
+        <target/>
+        <type/>
+    </sys_ux_client_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Flow Finder">18d672eb97132110974bbf1e6253afc8</application>
+        <file_path/>
+        <instance_id>1636d6e86f6af900d54da9cc5d3ee472</instance_id>
+        <instance_name>dev10498</instance_name>
+        <name>sys_ux_client_script_d2177aeb3a132110b1220da513d83441</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ux_client_script"&gt;&lt;sys_ux_client_script action="INSERT_OR_UPDATE"&gt;&lt;includes/&gt;&lt;macroponent display_value="Landing Page"&gt;d6177aeb2b132110cc0109b2ef4e3755&lt;/macroponent&gt;&lt;name&gt;close modal&lt;/name&gt;&lt;preset/&gt;&lt;required_translations&gt;[ ]&lt;/required_translations&gt;&lt;script&gt;&lt;![CDATA[/**
+ * @param {params} params
+ * @param {api} params.api
+ * @param {any} params.event
+ * @param {any} params.imports
+ */
+function handler({api, event, helpers, imports}) {
+     helpers.modal.close();
+}]]&gt;&lt;/script&gt;&lt;script_api_version&gt;2.0.0&lt;/script_api_version&gt;&lt;sys_class_name&gt;sys_ux_client_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;system&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2023-06-14 11:48:09&lt;/sys_created_on&gt;&lt;sys_id&gt;d2177aeb3a132110b1220da513d83441&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;close modal&lt;/sys_name&gt;&lt;sys_package display_value="Flow Finder" source="x_350851_flow_fi_0"&gt;18d672eb97132110974bbf1e6253afc8&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Flow Finder"&gt;18d672eb97132110974bbf1e6253afc8&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ux_client_script_d2177aeb3a132110b1220da513d83441&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;system&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2023-06-14 11:48:09&lt;/sys_updated_on&gt;&lt;target/&gt;&lt;type/&gt;&lt;/sys_ux_client_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-87608054</payload_hash>
+        <record_name>close modal</record_name>
+        <reverted_from/>
+        <source>d4d672eb97132110974bbf1e6253afca</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2023-06-14 11:48:19</sys_created_on>
+        <sys_id>c5273eeb97132110974bbf1e6253af81</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>188b9bc373b0000001</sys_recorded_at>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2023-06-14 11:48:19</sys_updated_on>
+        <type>UX Client Script</type>
+        <update_guid>4d273eeb781321107e7c622bf8239280</update_guid>
+        <update_guid_history>4d273eeb781321107e7c622bf8239280:-87608054</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-06-14 12:54:07</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_client_script">sys_ux_client_script</sys_db_object>
+        <sys_id>869b6c43c4e64dbfa03d526d791829f1</sys_id>
+        <sys_metadata>d2177aeb3a132110b1220da513d83441</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>close modal</sys_name>
+        <sys_package display_value="Flow Finder" source="x_350851_flow_fi_0">18d672eb97132110974bbf1e6253afc8</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Flow Finder">18d672eb97132110974bbf1e6253afc8</sys_scope>
+        <sys_scope_delete display_value="">987de73dd51340699b520bfeba7fe469</sys_scope_delete>
+        <sys_update_name>sys_ux_client_script_d2177aeb3a132110b1220da513d83441</sys_update_name>
+        <sys_update_version display_value="sys_ux_client_script_d2177aeb3a132110b1220da513d83441">c5273eeb97132110974bbf1e6253af81</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-06-14 12:54:07</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
