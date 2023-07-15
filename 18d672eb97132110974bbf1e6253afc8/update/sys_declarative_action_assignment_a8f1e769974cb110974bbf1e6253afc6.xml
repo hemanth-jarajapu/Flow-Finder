@@ -12,7 +12,7 @@
         <client_conditions_on_fields/>
         <client_script><![CDATA[function onClick() {
 	open("$flow-designer.do?sysparm_use_polaris=false#/", "_blank");
- }]]></client_script>
+}]]></client_script>
         <confirmation_message/>
         <confirmation_required>false</confirmation_required>
         <create_access>false</create_access>
@@ -53,7 +53,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>a8f1e769974cb110974bbf1e6253afc6</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_name>open_fd</sys_name>
         <sys_overrides/>
         <sys_package display_value="Flow Finder" source="x_350851_flow_fi_0">18d672eb97132110974bbf1e6253afc8</sys_package>
@@ -61,7 +61,7 @@
         <sys_scope display_value="Flow Finder">18d672eb97132110974bbf1e6253afc8</sys_scope>
         <sys_update_name>sys_declarative_action_assignment_a8f1e769974cb110974bbf1e6253afc6</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-07-15 16:48:24</sys_updated_on>
+        <sys_updated_on>2023-07-15 17:32:17</sys_updated_on>
         <table>sys_hub_flow</table>
         <tooltip/>
         <ui_component/>
