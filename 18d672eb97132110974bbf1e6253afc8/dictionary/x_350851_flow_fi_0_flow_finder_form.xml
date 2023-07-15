@@ -13,9 +13,11 @@
         <element choice="1" label="Type" max_length="32" name="trigger_type" reference="sys_hub_trigger_definition" reference_qual="categoryISNOTEMPTY^active=true^EQ" reference_qual_condition="categoryISNOTEMPTY^active=true^EQ" type="reference" use_dependent_field="true">
             <choice/>
         </element>
-        <element label="Action" max_length="500" name="used_action" type="string"/>
-        <element label="Subflow" max_length="500" name="used_subflow" type="string"/>
+        <element label="Action" max_length="32" name="used_action" reference="sys_hub_action_type_base" type="reference"/>
+        <element label="Decision Table" max_length="32" name="used_decision_table" reference="sys_decision" type="reference"/>
+        <element label="Subflow" max_length="32" name="used_subflow" reference="sys_hub_flow_base" type="reference"/>
         <element label="Table" max_length="32" name="used_table" reference="sys_db_object" type="reference"/>
+        <element label="Workflow" max_length="32" name="used_workflow" reference="wf_workflow" type="reference"/>
         <index name="index">
             <element name="application"/>
         </index>
@@ -23,7 +25,13 @@
             <element name="trigger_table"/>
         </index>
         <index name="index3">
+            <element name="used_decision_table"/>
+        </index>
+        <index name="index4">
             <element name="used_table"/>
+        </index>
+        <index name="index5">
+            <element name="used_workflow"/>
         </index>
     </element>
 </database>
