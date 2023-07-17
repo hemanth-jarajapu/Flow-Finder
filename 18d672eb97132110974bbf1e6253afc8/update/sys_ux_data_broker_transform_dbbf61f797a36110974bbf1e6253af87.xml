@@ -70,6 +70,24 @@
     "fieldType": "string",&#13;
     "mandatory": false,&#13;
     "defaultValue": ""&#13;
+  },&#13;
+{&#13;
+    "label": "Workflow",&#13;
+    "name": "workflow",&#13;
+    "description": "Sys ID of the workflow used by the flows",&#13;
+    "readOnly": false,&#13;
+    "fieldType": "string",&#13;
+    "mandatory": false,&#13;
+    "defaultValue": ""&#13;
+  },&#13;
+ {&#13;
+    "label": "Decision Table",&#13;
+    "name": "decision_table",&#13;
+    "description": "Sys ID of the decision table used by the flows",&#13;
+    "readOnly": false,&#13;
+    "fieldType": "string",&#13;
+    "mandatory": false,&#13;
+    "defaultValue": ""&#13;
   }&#13;
 ]</props>
         <required_translations>[ {
@@ -82,6 +100,9 @@
   "message" : "Application",
   "comment" : ""
 }, {
+  "message" : "Decision Table",
+  "comment" : ""
+}, {
   "message" : "Subflow",
   "comment" : ""
 }, {
@@ -89,6 +110,9 @@
   "comment" : ""
 }, {
   "message" : "Sys ID of the application",
+  "comment" : ""
+}, {
+  "message" : "Sys ID of the decision table used by the flows",
   "comment" : ""
 }, {
   "message" : "Sys ID of the subflow used by the flows",
@@ -100,6 +124,9 @@
   "message" : "Sys ID of the table used by the flows",
   "comment" : ""
 }, {
+  "message" : "Sys ID of the workflow used by the flows",
+  "comment" : ""
+}, {
   "message" : "Table",
   "comment" : ""
 }, {
@@ -108,86 +135,124 @@
 }, {
   "message" : "Trigger Type",
   "comment" : ""
+}, {
+  "message" : "Workflow",
+  "comment" : ""
 } ]</required_translations>
         <schema_version>1.0.0</schema_version>
         <script><![CDATA[function transform(input) {
-    var application = input.application;
-    var table = input.table;
-    var subflow = input.subflow;
-    var action = input.action;
-    var active = input.active;
-    var trigger_table = input.trigger_table;
-    var trigger_type = input.trigger_type;
+	var application = input.application;
+	var table = input.table;
+	var subflow = input.subflow;
+	var action = input.action;
+	var active = input.active;
+	var trigger_table = input.trigger_table;
+	var trigger_type = input.trigger_type;
+	var workflow = input.workflow;
+	var decision_table = input.decision_table;
 
-    var flows = new GlideRecord("sys_hub_flow");
-    flows.orderBy("name");
-    if (!table && !application && !subflow && !action && !trigger_table && (active == "both") && !trigger_type) {
-        return flows.getEncodedQuery();
-    }
+	var flows = new GlideRecord("sys_hub_flow");
+	flows.orderBy("name");
+	if (!table && !application && !subflow && !action && !trigger_table && (active == "both") && !trigger_type && !workflow && !decision_table) {
+		return flows.getEncodedQuery();
+	}
 
-    if (table || subflow || action) {
-        flows.addQuery("label_cacheISNOTEMPTY");
-    }
-    if (table) {
-        var tableGR = new GlideRecord("sys_db_object");
-        if (tableGR.get(table)) {
-            flows.addQuery('^label_cacheLIKE"reference":"' + tableGR.getValue("name") + '"');
-        }
-    }
-    if (subflow) {
-        flows.addQuery("label_cacheLIKE" + subflow);
-    }
-    if (action) {
-        flows.addQuery("label_cacheLIKE" + action);
-    }
+	if (table) {
+		var tableGR = new GlideRecord("sys_db_object");
+		if (tableGR.get(table)) {
+			flows.addQuery('label_cacheISNOTEMPTY^label_cacheLIKE"reference":"' + tableGR.getValue("name") + '"');
+		}
+	}
+	if (subflow) {
+		var subflowInstances = new GlideRecord("sys_hub_sub_flow_instance");
+		subflowInstances.addQuery("flowISNOTEMPTY^subflow=" + subflow);
+		subflowInstances.query();
+		var flowsUsingSubflow = [];
+		while (subflowInstances.next()) {
+			flowsUsingSubflow.push(subflowInstances.getValue("flow"));
+		}
 
-    if (application) {
-        flows.addQuery("sys_scope", application);
-    }
-    if (active != "both") {
-        if (active == "active") {
-            flows.addQuery("active", true);
-        } else if (active == "inactive") {
-            flows.addQuery("active", false);
-        }
-    }
-    if (trigger_table) {
-        var tables = new GlideRecord("sys_db_object");
-        if (tables.get(trigger_table)) {
-            var tableTriggeredflowIDs = sn_flow.AssociatedFlows.getFlows(tables.getValue("name"));
-            if (tableTriggeredflowIDs) {
-                flows.addQuery("sys_idIN" + tableTriggeredflowIDs);
-            }
-        }
-    }
-    if (trigger_type) {
-        var triggers = new GlideRecord('sys_hub_trigger_instance');
-        triggers.addQuery('flow.sys_class_name=sys_hub_flow^trigger_definition=' + trigger_type);
-        triggers.query();
-        var flowIDsofType = [];
-        while (triggers.next()) {
-            flowIDsofType.push(triggers.getValue("flow"));
-        }
+		flows.addQuery("sys_idIN" + flowsUsingSubflow);
+	}
+	if (action) {
+		var actionInstances = new GlideRecord("sys_hub_action_instance");
+		actionInstances.addQuery("flowISNOTEMPTY^action_type=" + action);
+		actionInstances.query();
+		var flowsUsingAction = [];
+		while (actionInstances.next()) {
+			flowsUsingAction.push(actionInstances.getValue("flow"));
+		}
 
-        //if (flowIDsofType.length > 0) {
-            flows.addQuery("sys_idIN" + flowIDsofType);
-        //}
-    }
+		flows.addQuery("sys_idIN" + flowsUsingAction);
+	}
 
-    return flows.getEncodedQuery();
+	if (application) {
+		flows.addQuery("sys_scope", application);
+	}
+	if (active != "both") {
+		if (active == "active") {
+			flows.addQuery("active", true);
+		} else if (active == "inactive") {
+			flows.addQuery("active", false);
+		}
+	}
+	if (trigger_table) {
+		var tables = new GlideRecord("sys_db_object");
+		if (tables.get(trigger_table)) {
+			var tableTriggeredflowIDs = sn_flow.AssociatedFlows.getFlows(tables.getValue("name"));
+			if (tableTriggeredflowIDs) {
+				flows.addQuery("sys_idIN" + tableTriggeredflowIDs);
+			}
+		}
+	}
+	if (trigger_type) {
+		var triggers = new GlideRecord('sys_hub_trigger_instance');
+		triggers.addQuery('flow.sys_class_name=sys_hub_flow^trigger_definition=' + trigger_type);
+		triggers.query();
+		var flowIDsofType = [];
+		while (triggers.next()) {
+			flowIDsofType.push(triggers.getValue("flow"));
+		}
+
+		flows.addQuery("sys_idIN" + flowIDsofType);
+	}
+
+	var flowLogicInstances = new GlideRecord("sys_hub_flow_logic");
+	if (workflow) {
+		flowLogicInstances.addQuery("workflow_reference=" + workflow);
+		flowLogicInstances.query();
+		var flowsUsingWorkflow = [];
+		while (flowLogicInstances.next()) {
+			flowsUsingWorkflow.push(flowLogicInstances.getValue("flow"));
+		}
+
+		flows.addQuery("sys_idIN" + flowsUsingWorkflow);
+	}
+	if (decision_table) {
+		flowLogicInstances.addQuery("decision_table=" + decision_table);
+		flowLogicInstances.query();
+		var flowsUsingDT = [];
+		while (flowLogicInstances.next()) {
+			flowsUsingDT.push(flowLogicInstances.getValue("flow"));
+		}
+
+		flows.addQuery("sys_idIN" + flowsUsingDT);
+	}
+
+	return flows.getEncodedQuery();
 }]]></script>
         <sys_class_name>sys_ux_data_broker_transform</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-06-27 12:05:32</sys_created_on>
         <sys_id>dbbf61f797a36110974bbf1e6253af87</sys_id>
-        <sys_mod_count>13</sys_mod_count>
+        <sys_mod_count>22</sys_mod_count>
         <sys_name>Flow Search Data Broker</sys_name>
         <sys_package display_value="Flow Finder" source="x_350851_flow_fi_0">18d672eb97132110974bbf1e6253afc8</sys_package>
         <sys_policy/>
         <sys_scope display_value="Flow Finder">18d672eb97132110974bbf1e6253afc8</sys_scope>
         <sys_update_name>sys_ux_data_broker_transform_dbbf61f797a36110974bbf1e6253af87</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-07-02 11:52:08</sys_updated_on>
+        <sys_updated_on>2023-07-13 14:18:18</sys_updated_on>
     </sys_ux_data_broker_transform>
     <sys_translated_text action="delete_multiple" query="documentkey=dbbf61f797a36110974bbf1e6253af87"/>
 </record_update>

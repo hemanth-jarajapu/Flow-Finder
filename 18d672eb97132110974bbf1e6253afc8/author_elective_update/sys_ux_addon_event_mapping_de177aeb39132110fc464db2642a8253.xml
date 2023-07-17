@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_addon_event_mapping">
+    <sys_ux_addon_event_mapping action="DELETE">
+        <active>true</active>
+        <controller/>
+        <description/>
+        <name>Approve Mapping</name>
+        <parent_macroponent display_value="Landing Page">d6177aeb2b132110cc0109b2ef4e3755</parent_macroponent>
+        <source_component/>
+        <source_da display_value="approve">d2177aebec1321100e3cc326667e895d</source_da>
+        <source_element_id>data_row_1</source_element_id>
+        <sys_class_name>sys_ux_addon_event_mapping</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2023-06-14 11:48:12</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>de177aeb39132110fc464db2642a8253</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Approve Mapping</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Flow Finder" source="x_350851_flow_fi_0">18d672eb97132110974bbf1e6253afc8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Flow Finder">18d672eb97132110974bbf1e6253afc8</sys_scope>
+        <sys_update_name>sys_ux_addon_event_mapping_de177aeb39132110fc464db2642a8253</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2023-06-14 11:48:12</sys_updated_on>
+        <target_event display_value="">1e177aeb8c132110fa9000aec9589c53</target_event>
+        <target_payload_mapping>{
+  "type": "MAP_CONTAINER",
+  "container": {
+    "sysId": {
+      "type": "EVENT_PAYLOAD_BINDING",
+      "binding": {
+        "address": [
+          "sysId"
+        ]
+      }
+    },
+    "table": {
+      "type": "EVENT_PAYLOAD_BINDING",
+      "binding": {
+        "address": [
+          "table"
+        ]
+      }
+    }
+  }
+}</target_payload_mapping>
+    </sys_ux_addon_event_mapping>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Flow Finder">18d672eb97132110974bbf1e6253afc8</application>
+        <file_path/>
+        <instance_id>1636d6e86f6af900d54da9cc5d3ee472</instance_id>
+        <instance_name>dev10498</instance_name>
+        <name>sys_ux_addon_event_mapping_de177aeb39132110fc464db2642a8253</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_addon_event_mapping"><sys_ux_addon_event_mapping action="INSERT_OR_UPDATE"><active>true</active><controller/><description/><name>Approve Mapping</name><parent_macroponent display_value="Landing Page">d6177aeb2b132110cc0109b2ef4e3755</parent_macroponent><source_component/><source_da display_value="approve">d2177aebec1321100e3cc326667e895d</source_da><source_element_id>data_row_1</source_element_id><sys_class_name>sys_ux_addon_event_mapping</sys_class_name><sys_created_by>system</sys_created_by><sys_created_on>2023-06-14 11:48:12</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>de177aeb39132110fc464db2642a8253</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Approve Mapping</sys_name><sys_overrides/><sys_package display_value="Flow Finder" source="x_350851_flow_fi_0">18d672eb97132110974bbf1e6253afc8</sys_package><sys_policy/><sys_scope display_value="Flow Finder">18d672eb97132110974bbf1e6253afc8</sys_scope><sys_update_name>sys_ux_addon_event_mapping_de177aeb39132110fc464db2642a8253</sys_update_name><sys_updated_by>system</sys_updated_by><sys_updated_on>2023-06-14 11:48:12</sys_updated_on><target_event display_value="">1e177aeb8c132110fa9000aec9589c53</target_event><target_payload_mapping>{
+  "type": "MAP_CONTAINER",
+  "container": {
+    "sysId": {
+      "type": "EVENT_PAYLOAD_BINDING",
+      "binding": {
+        "address": [
+          "sysId"
+        ]
+      }
+    },
+    "table": {
+      "type": "EVENT_PAYLOAD_BINDING",
+      "binding": {
+        "address": [
+          "table"
+        ]
+      }
+    }
+  }
+}</target_payload_mapping></sys_ux_addon_event_mapping></record_update>]]></payload>
+        <payload_hash>-1028338919</payload_hash>
+        <record_name>Approve Mapping</record_name>
+        <reverted_from/>
+        <source>340f670397332110974bbf1e6253af3a</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by/>
+        <sys_created_on>2023-07-07 23:06:51</sys_created_on>
+        <sys_id>555a5761974cb110974bbf1e6253afe2</sys_id>
+        <sys_mod_count/>
+        <sys_recorded_at>189329baef80000000</sys_recorded_at>
+        <sys_updated_by/>
+        <sys_updated_on/>
+        <type>UX Add-on Event Mapping</type>
+        <update_guid>155a57619b4cb1100ab10b3f5b86dae2</update_guid>
+        <update_guid_history>155a57619b4cb1100ab10b3f5b86dae2:-1028338919</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-15 16:01:19</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_addon_event_mapping">sys_ux_addon_event_mapping</sys_db_object>
+        <sys_id>0372e8eae6ae4206b811169355ab4ec9</sys_id>
+        <sys_metadata>de177aeb39132110fc464db2642a8253</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Approve Mapping</sys_name>
+        <sys_package display_value="Flow Finder" source="x_350851_flow_fi_0">18d672eb97132110974bbf1e6253afc8</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Flow Finder">18d672eb97132110974bbf1e6253afc8</sys_scope>
+        <sys_scope_delete display_value="">987de73dd51340699b520bfeba7fe469</sys_scope_delete>
+        <sys_update_name>sys_ux_addon_event_mapping_de177aeb39132110fc464db2642a8253</sys_update_name>
+        <sys_update_version display_value="sys_ux_addon_event_mapping_de177aeb39132110fc464db2642a8253">555a5761974cb110974bbf1e6253afe2</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-15 16:01:19</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

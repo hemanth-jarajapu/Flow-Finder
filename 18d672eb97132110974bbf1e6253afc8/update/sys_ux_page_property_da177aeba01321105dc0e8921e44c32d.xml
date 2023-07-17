@@ -4,19 +4,7 @@
         <description/>
         <name>chrome_header</name>
         <page display_value="Flow Finder">06177aeb97132110974bbf1e6253af08</page>
-        <required_translations>[ {
-  "message" : "Configure",
-  "comment" : ""
-}, {
-  "message" : "Logout",
-  "comment" : ""
-}, {
-  "message" : "Settings",
-  "comment" : ""
-}, {
-  "message" : "UserMenu",
-  "comment" : ""
-} ]</required_translations>
+        <required_translations>[ ]</required_translations>
         <route/>
         <suffix/>
         <sys_class_name>sys_ux_page_property</sys_class_name>
@@ -25,17 +13,28 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>da177aeba01321105dc0e8921e44c32d</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name>chrome_header</sys_name>
         <sys_package display_value="Flow Finder" source="x_350851_flow_fi_0">18d672eb97132110974bbf1e6253afc8</sys_package>
         <sys_policy/>
         <sys_scope display_value="Flow Finder">18d672eb97132110974bbf1e6253afc8</sys_scope>
         <sys_update_name>sys_ux_page_property_da177aeba01321105dc0e8921e44c32d</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-06-14 11:53:43</sys_updated_on>
+        <sys_updated_on>2023-07-09 06:06:32</sys_updated_on>
         <type>json</type>
         <unique_name>x_350851_flow_fi_0.06177aeb97132110974bbf1e6253af08.root.chrome_header</unique_name>
-        <value>{"privatePage":{"searchEnabled":true,"userPrefsEnabled":true,"currentScreenLinkConfiguration":{"roles":["admin"],"position":250},"globalTools":{"collapsingMenuId":0,"primaryItems":[{"label":"UserMenu","icon":"user","type":"menu","primaryDisplay":"icon","value":{"children":[{"label":{"translatable":true,"message":"Settings"},"position":100,"type":"navigation","value":{"type":"route","value":{"route":"settings","fields":{}}}},{"condition":{"roles":["admin","ui_builder_admin"]},"label":{"translatable":true,"message":"Configure"},"type":"navigation","position":200,"primaryDisplay":"none","value":{"type":"external","opensWindow":"true","value":{"href":"/nav_to.do?uri=/sys_ux_app_config.do?sys_id=0a177aeb97132110974bbf1e6253af08"}}},{"label":{"translatable":true,"message":"Logout"},"position":500,"type":"navigation","value":{"type":"AUTH_ROUTE_BINDING","binding":{"address":["logout"],"params":{"reload":true},"default":"/logout.do"}}}]}}],"secondaryItems":[]}},"publicPage":{"menuEnabled":false,"logoRoute":{"type":"route","value":{"route":"landing","fields":{}}},"searchEnabled":false}}</value>
+        <value>{&#13;
+    "privatePage":{&#13;
+       "searchEnabled": false,&#13;
+       "userPrefsEnabled": false,&#13;
+       "menuEnabled": false&#13;
+    },&#13;
+    "publicPage":{&#13;
+       "searchEnabled": false,&#13;
+       "userPrefsEnabled": false,&#13;
+       "menuEnabled": false&#13;
+    }&#13;
+ }</value>
     </sys_ux_page_property>
     <sys_translated_text action="delete_multiple" query="documentkey=da177aeba01321105dc0e8921e44c32d"/>
 </record_update>

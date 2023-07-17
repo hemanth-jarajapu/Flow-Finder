@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="DELETE">
+        <includes/>
+        <macroponent display_value="Landing Page">d6177aeb2b132110cc0109b2ef4e3755</macroponent>
+        <name>button_bare_1/iconStart</name>
+        <preset/>
+        <required_translations>[ ]</required_translations>
+        <script><![CDATA[/**
+  * @param {params} params
+  * @param {api} params.api
+  * @param {TransformApiHelpers} params.helpers
+  */
+function evaluateProperty({api, helpers}) {
+  var showForm = api.state.show_form;
+  if(showForm){
+    return "list_hide_fill";
+  }
+	return 'list_show_fill';
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-06-26 14:11:03</sys_created_on>
+        <sys_id>b0eac92797632110974bbf1e6253afc7</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>button_bare_1/iconStart</sys_name>
+        <sys_package display_value="Flow Finder" source="x_350851_flow_fi_0">18d672eb97132110974bbf1e6253afc8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Flow Finder">18d672eb97132110974bbf1e6253afc8</sys_scope>
+        <sys_update_name>sys_ux_client_script_b0eac92797632110974bbf1e6253afc7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-06-26 14:18:22</sys_updated_on>
+        <target>macroponent</target>
+        <type>transform</type>
+    </sys_ux_client_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Flow Finder">18d672eb97132110974bbf1e6253afc8</application>
+        <file_path/>
+        <instance_id>1636d6e86f6af900d54da9cc5d3ee472</instance_id>
+        <instance_name>dev10498</instance_name>
+        <name>sys_ux_client_script_b0eac92797632110974bbf1e6253afc7</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ux_client_script"&gt;&lt;sys_ux_client_script action="INSERT_OR_UPDATE"&gt;&lt;includes/&gt;&lt;macroponent display_value="Landing Page"&gt;d6177aeb2b132110cc0109b2ef4e3755&lt;/macroponent&gt;&lt;name&gt;button_bare_1/iconStart&lt;/name&gt;&lt;preset/&gt;&lt;required_translations&gt;[ ]&lt;/required_translations&gt;&lt;script&gt;&lt;![CDATA[/**
+  * @param {params} params
+  * @param {api} params.api
+  * @param {TransformApiHelpers} params.helpers
+  */
+function evaluateProperty({api, helpers}) {
+  var showForm = api.state.show_form;
+  if(showForm){
+    return "list_hide_fill";
+  }
+	return 'list_show_fill';
+}]]&gt;&lt;/script&gt;&lt;script_api_version&gt;2.0.0&lt;/script_api_version&gt;&lt;sys_class_name&gt;sys_ux_client_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2023-06-26 14:11:03&lt;/sys_created_on&gt;&lt;sys_id&gt;b0eac92797632110974bbf1e6253afc7&lt;/sys_id&gt;&lt;sys_mod_count&gt;4&lt;/sys_mod_count&gt;&lt;sys_name&gt;button_bare_1/iconStart&lt;/sys_name&gt;&lt;sys_package display_value="Flow Finder" source="x_350851_flow_fi_0"&gt;18d672eb97132110974bbf1e6253afc8&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Flow Finder"&gt;18d672eb97132110974bbf1e6253afc8&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ux_client_script_b0eac92797632110974bbf1e6253afc7&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2023-06-26 14:18:22&lt;/sys_updated_on&gt;&lt;target&gt;macroponent&lt;/target&gt;&lt;type&gt;transform&lt;/type&gt;&lt;/sys_ux_client_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-547609936</payload_hash>
+        <record_name>button_bare_1/iconStart</record_name>
+        <reverted_from/>
+        <source>d4d672eb97132110974bbf1e6253afca</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-06-26 14:18:22</sys_created_on>
+        <sys_id>809cc9e797632110974bbf1e6253af30</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>188f811e6fd0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-06-26 14:18:22</sys_updated_on>
+        <type>UX Client Script</type>
+        <update_guid>489cc9e7676321101c2ff503b0f5922f</update_guid>
+        <update_guid_history>489cc9e7676321101c2ff503b0f5922f:-547609936,42db01e73c632110a18dc6f04a7f9452:-925145763,e75b09a70f63211061bb2531bf1c9fcf:1661688279,c91b05a7cf632110e32ddc3b3a78c120:-361585348,81ea41a77663211092d473db6cc84508:-1723043281</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-09 05:49:10</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_client_script">sys_ux_client_script</sys_db_object>
+        <sys_id>169c550f6eeb44d282696dbc7f0f1da4</sys_id>
+        <sys_metadata>b0eac92797632110974bbf1e6253afc7</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>button_bare_1/iconStart</sys_name>
+        <sys_package display_value="Flow Finder" source="x_350851_flow_fi_0">18d672eb97132110974bbf1e6253afc8</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Flow Finder">18d672eb97132110974bbf1e6253afc8</sys_scope>
+        <sys_scope_delete display_value="">987de73dd51340699b520bfeba7fe469</sys_scope_delete>
+        <sys_update_name>sys_ux_client_script_b0eac92797632110974bbf1e6253afc7</sys_update_name>
+        <sys_update_version display_value="sys_ux_client_script_b0eac92797632110974bbf1e6253afc7">809cc9e797632110974bbf1e6253af30</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-09 05:49:10</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
