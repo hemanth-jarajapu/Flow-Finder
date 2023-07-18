@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
+    <sys_ui_page action="DELETE">
+        <category>general</category>
+        <client_script/>
+        <description/>
+        <direct>false</direct>
+        <endpoint>x_350851_flow_fi_0_test_page.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+
+	<body>
+		<details>
+		  <summary>
+			  What is the meaning of life?
+			  <span class="arrow">&#10158;</span>
+		  </summary>
+		  <p>
+			  42
+		  </p>
+		</details>
+	</body>
+	
+	
+	
+	
+	
+	
+	<style>
+		details {
+  user-select: none;
+}
+		
+		details>summary {
+			border: 1px solid black;
+			border-radius: 5px;
+		}
+
+details>summary span.arrow {
+  width: 24px;
+  height: 24px;
+  transition: all 0.3s;
+}
+
+details[open] summary span.arrow {
+  transform: rotate(90deg);
+}
+
+summary {
+  display: flex;
+  cursor: pointer;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+	</style>
+</j:jelly>]]></html>
+        <name>test_page</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-17 14:50:09</sys_created_on>
+        <sys_id>1bbc119697803110974bbf1e6253af58</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_name>test_page</sys_name>
+        <sys_package display_value="Flow Finder" source="x_350851_flow_fi_0">18d672eb97132110974bbf1e6253afc8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Flow Finder">18d672eb97132110974bbf1e6253afc8</sys_scope>
+        <sys_update_name>sys_ui_page_1bbc119697803110974bbf1e6253af58</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-17 15:12:25</sys_updated_on>
+    </sys_ui_page>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Flow Finder">18d672eb97132110974bbf1e6253afc8</application>
+        <file_path/>
+        <instance_id>1636d6e86f6af900d54da9cc5d3ee472</instance_id>
+        <instance_name>dev10498</instance_name>
+        <name>sys_ui_page_1bbc119697803110974bbf1e6253af58</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ui_page"&gt;&lt;sys_ui_page action="INSERT_OR_UPDATE"&gt;&lt;category&gt;general&lt;/category&gt;&lt;client_script/&gt;&lt;description/&gt;&lt;direct&gt;false&lt;/direct&gt;&lt;endpoint&gt;x_350851_flow_fi_0_test_page.do&lt;/endpoint&gt;&lt;html&gt;&lt;![CDATA[&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null"&gt;
+
+	&lt;body&gt;
+		&lt;details&gt;
+		  &lt;summary&gt;
+			  What is the meaning of life?
+			  &lt;span class="arrow"&gt;&amp;#10158;&lt;/span&gt;
+		  &lt;/summary&gt;
+		  &lt;p&gt;
+			  42
+		  &lt;/p&gt;
+		&lt;/details&gt;
+	&lt;/body&gt;
+	
+	
+	
+	
+	
+	
+	&lt;style&gt;
+		details {
+  user-select: none;
+}
+		
+		details&gt;summary {
+			border: 1px solid black;
+			border-radius: 5px;
+		}
+
+details&gt;summary span.arrow {
+  width: 24px;
+  height: 24px;
+  transition: all 0.3s;
+}
+
+details[open] summary span.arrow {
+  transform: rotate(90deg);
+}
+
+summary {
+  display: flex;
+  cursor: pointer;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+	&lt;/style&gt;
+&lt;/j:jelly&gt;]]&gt;&lt;/html&gt;&lt;name&gt;test_page&lt;/name&gt;&lt;processing_script/&gt;&lt;sys_class_name&gt;sys_ui_page&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2023-07-17 14:50:09&lt;/sys_created_on&gt;&lt;sys_id&gt;1bbc119697803110974bbf1e6253af58&lt;/sys_id&gt;&lt;sys_mod_count&gt;14&lt;/sys_mod_count&gt;&lt;sys_name&gt;test_page&lt;/sys_name&gt;&lt;sys_package display_value="Flow Finder" source="x_350851_flow_fi_0"&gt;18d672eb97132110974bbf1e6253afc8&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Flow Finder"&gt;18d672eb97132110974bbf1e6253afc8&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_page_1bbc119697803110974bbf1e6253af58&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2023-07-17 15:12:25&lt;/sys_updated_on&gt;&lt;/sys_ui_page&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>159177676</payload_hash>
+        <record_name>test_page</record_name>
+        <reverted_from/>
+        <source>dc4695de97403110974bbf1e6253af05</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-17 15:12:25</sys_created_on>
+        <sys_id>2c52a5da97803110974bbf1e6253afb6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1896468ec910000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-17 15:12:25</sys_updated_on>
+        <type>UI Page</type>
+        <update_guid>e052a5da1d8031101ef86edeaf7a02b6</update_guid>
+        <update_guid_history>e052a5da1d8031101ef86edeaf7a02b6:159177676,8932e91a1780311069ffc151e9b8e5ef:876050187,e8cf115a67803110702b990c55a0c9f4:1431212649,c28f9dd65d8031107d5a1018a1bafb3f:-1433662160,287f19d60e803110e048ca9fbecf563f:108802484,1efe15d62e803110be4c8435c3a02143:2067107236,20ced996f8803110b590a2124f476fe2:-1124956978,3f8e55d62380311080d789df79ea9cf5:-559438378,970e55d600803110fc7442931916f168:-1913226582,d9fdd1d6ed803110fb2cb2335e05f1e6:1379393828,f7cdd996ef803110c904764c2e87b592:-1252947118,7badd9962e803110032ac0d9a3a0958e:-835769179,666d59969b80311040a384f30ee564f8:877420940,305d1996c0803110c40b887a33fa32a6:1913373898,e63d199656803110e4e90c419829b80d:-1260251966</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-18 15:37:25</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_page">sys_ui_page</sys_db_object>
+        <sys_id>442aff384e96470898ce6c539efa2640</sys_id>
+        <sys_metadata>1bbc119697803110974bbf1e6253af58</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>test_page</sys_name>
+        <sys_package display_value="Flow Finder" source="x_350851_flow_fi_0">18d672eb97132110974bbf1e6253afc8</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Flow Finder">18d672eb97132110974bbf1e6253afc8</sys_scope>
+        <sys_scope_delete display_value="">987de73dd51340699b520bfeba7fe469</sys_scope_delete>
+        <sys_update_name>sys_ui_page_1bbc119697803110974bbf1e6253af58</sys_update_name>
+        <sys_update_version display_value="sys_ui_page_1bbc119697803110974bbf1e6253af58">2c52a5da97803110974bbf1e6253afb6</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-18 15:37:25</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="DELETE">
+        <includes/>
+        <macroponent display_value="Record Page(task)">5e177aeb4513211081c556046c3b6d52</macroponent>
+        <name>record_header_1/headerImageItem</name>
+        <preset/>
+        <required_translations/>
+        <script><![CDATA[/**
+ * @param {params} params
+ * @param {api} params.api
+ * @param {TransformApiHelpers} params.helpers
+ */
+function evaluateProperty({
+    api,
+    helpers
+}) {
+    if (api.context.props.table == 'sc_req_item') {
+        return {
+            headerImage: api.data.look_up_record_2.result.picture.displayValue,
+            fieldLabel: "Test value" //Here only to support the required structure of the object
+        }
+    } else {
+        return "";
+    }
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2023-06-14 11:48:12</sys_created_on>
+        <sys_id>d6177aeb98132110dd5ddee5cc549440</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>record_header_1/headerImageItem</sys_name>
+        <sys_package display_value="Flow Finder" source="x_350851_flow_fi_0">18d672eb97132110974bbf1e6253afc8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Flow Finder">18d672eb97132110974bbf1e6253afc8</sys_scope>
+        <sys_update_name>sys_ux_client_script_d6177aeb98132110dd5ddee5cc549440</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2023-06-14 11:48:12</sys_updated_on>
+        <target>macroponent</target>
+        <type>transform</type>
+    </sys_ux_client_script>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Flow Finder">18d672eb97132110974bbf1e6253afc8</application>
+        <file_path/>
+        <instance_id>1636d6e86f6af900d54da9cc5d3ee472</instance_id>
+        <instance_name>dev10498</instance_name>
+        <name>sys_ux_client_script_d6177aeb98132110dd5ddee5cc549440</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ux_client_script"&gt;
+    &lt;sys_ux_client_script action="INSERT_OR_UPDATE"&gt;
+        &lt;includes/&gt;
+        &lt;macroponent display_value="Record Page(task)"&gt;5e177aeb4513211081c556046c3b6d52&lt;/macroponent&gt;
+        &lt;name&gt;record_header_1/headerImageItem&lt;/name&gt;
+        &lt;preset/&gt;
+        &lt;required_translations/&gt;
+        &lt;script&gt;&lt;![CDATA[/**
+ * @param {params} params
+ * @param {api} params.api
+ * @param {TransformApiHelpers} params.helpers
+ */
+function evaluateProperty({
+    api,
+    helpers
+}) {
+    if (api.context.props.table == 'sc_req_item') {
+        return {
+            headerImage: api.data.look_up_record_2.result.picture.displayValue,
+            fieldLabel: "Test value" //Here only to support the required structure of the object
+        }
+    } else {
+        return "";
+    }
+}]]&gt;&lt;/script&gt;
+        &lt;script_api_version&gt;2.0.0&lt;/script_api_version&gt;
+        &lt;sys_class_name&gt;sys_ux_client_script&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;system&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2023-06-14 11:48:12&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;d6177aeb98132110dd5ddee5cc549440&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+        &lt;sys_name&gt;record_header_1/headerImageItem&lt;/sys_name&gt;
+        &lt;sys_package display_value="Flow Finder" source="x_350851_flow_fi_0"&gt;18d672eb97132110974bbf1e6253afc8&lt;/sys_package&gt;
+        &lt;sys_policy/&gt;
+        &lt;sys_scope display_value="Flow Finder"&gt;18d672eb97132110974bbf1e6253afc8&lt;/sys_scope&gt;
+        &lt;sys_update_name&gt;sys_ux_client_script_d6177aeb98132110dd5ddee5cc549440&lt;/sys_update_name&gt;
+        &lt;sys_updated_by&gt;system&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2023-06-14 11:48:12&lt;/sys_updated_on&gt;
+        &lt;target&gt;macroponent&lt;/target&gt;
+        &lt;type&gt;transform&lt;/type&gt;
+    &lt;/sys_ux_client_script&gt;
+&lt;/record_update&gt;</payload>
+        <payload_hash>-1308594375</payload_hash>
+        <record_name>record_header_1/headerImageItem</record_name>
+        <reverted_from/>
+        <source>e406d59e97403110974bbf1e6253af9e</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-17 14:18:57</sys_created_on>
+        <sys_id>1d169d9e97403110974bbf1e6253af31</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1896437f8650000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-17 14:18:57</sys_updated_on>
+        <type>UX Client Script</type>
+        <update_guid>19169d9ec640311031ff06ebb5548e31</update_guid>
+        <update_guid_history>19169d9ec640311031ff06ebb5548e31:0,ba85955e5f4031102c74c34289cac2cf:44470934,7e85955e1a403110409a4cdb9095efcc:1618620585</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-17 14:38:55</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_client_script">sys_ux_client_script</sys_db_object>
+        <sys_id>c8176fafa8ba4efbbf5b981b56bcbd69</sys_id>
+        <sys_metadata>d6177aeb98132110dd5ddee5cc549440</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>record_header_1/headerImageItem</sys_name>
+        <sys_package display_value="Flow Finder" source="x_350851_flow_fi_0">18d672eb97132110974bbf1e6253afc8</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Flow Finder">18d672eb97132110974bbf1e6253afc8</sys_scope>
+        <sys_scope_delete display_value="">987de73dd51340699b520bfeba7fe469</sys_scope_delete>
+        <sys_update_name>sys_ux_client_script_d6177aeb98132110dd5ddee5cc549440</sys_update_name>
+        <sys_update_version display_value="sys_ux_client_script_d6177aeb98132110dd5ddee5cc549440">1d169d9e97403110974bbf1e6253af31</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-17 14:38:55</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
