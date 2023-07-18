@@ -54,7 +54,7 @@
 			case ("Updated"): {
 				flowDetails.trigger.push("Table: " + triggerInstance.trigger_inputs.table);
 				if (triggerInstance.trigger_inputs.trigger_strategy) {
-					flowDetails.trigger.push(triggerInstance.trigger_inputs.trigger_strategy.getDisplayValue());
+					flowDetails.trigger.push("Run: " + triggerInstance.trigger_inputs.trigger_strategy.getDisplayValue());
 				}
 				flowDetails.trigger.push(triggerInstance.trigger_inputs.run_when_setting.getDisplayValue());
 				flowDetails.trigger.push(triggerInstance.trigger_inputs.run_when_user_setting.getDisplayValue());
@@ -90,7 +90,7 @@
 	// Fill Usage Data
 	// Action Data
 	var actionInstances = new GlideRecord("sys_hub_action_instance");
-	actionInstances.addQuery("flowISNOTEMPTY^flow=" + input.flow_id);
+	actionInstances.addQuery("flow=" + input.flow_id + "^action_typeISNOTEMPTY");
 	actionInstances.query();
 	if (actionInstances.hasNext()) {
 		flowDetails.hideUsage = false;
@@ -108,7 +108,7 @@
 		}
 		actiondata.data.push({
 			"name": actionInstances.action_type.getDisplayValue(),
-			"link": "sys_hub_action_type_base.do?sys_id=" + actionInstances.getValue("action_type")
+			"link": "sys_hub_action_type_base.do?sys_id=" + actionInstances.action_type.parent_action
 		});
 		usedActioninstances.push(actionType);
 	}
@@ -169,13 +169,13 @@
 		if (flowLogicInstances.workflow_reference) {
 			workflowData.data.push({
 				"name": flowLogicInstances.workflow_reference.getDisplayValue(),
-				"data": "wf_workflow.do?sys_id=" + flowLogicInstances.getValue("workflow_reference")
+				"link": "wf_workflow.do?sys_id=" + flowLogicInstances.getValue("workflow_reference")
 			});
 		}
 		if (flowLogicInstances.decision_table) {
 			dtData.data.push({
 				"name": flowLogicInstances.decision_table.getDisplayValue(),
-				"data": "wf_workflow.do?sys_id=" + flowLogicInstances.getValue("decision_table")
+				"link": "sys_decision.do?sys_id=" + flowLogicInstances.getValue("decision_table")
 			});
 		}
 		usedFlowLogicInstances.push(wrfdtId);
@@ -193,14 +193,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-07-18 08:19:26</sys_created_on>
         <sys_id>ba7ac9a297007110974bbf1e6253af65</sys_id>
-        <sys_mod_count>27</sys_mod_count>
+        <sys_mod_count>33</sys_mod_count>
         <sys_name>Fetch Flow Details</sys_name>
         <sys_package display_value="Flow Finder" source="x_350851_flow_fi_0">18d672eb97132110974bbf1e6253afc8</sys_package>
         <sys_policy/>
         <sys_scope display_value="Flow Finder">18d672eb97132110974bbf1e6253afc8</sys_scope>
         <sys_update_name>sys_ux_data_broker_transform_ba7ac9a297007110974bbf1e6253af65</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-07-18 14:10:11</sys_updated_on>
+        <sys_updated_on>2023-07-18 15:57:46</sys_updated_on>
     </sys_ux_data_broker_transform>
     <sys_translated_text action="delete_multiple" query="documentkey=ba7ac9a297007110974bbf1e6253af65"/>
 </record_update>
