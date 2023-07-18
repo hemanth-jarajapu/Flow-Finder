@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>general</category>
+        <client_script/>
+        <description/>
+        <direct>false</direct>
+        <endpoint>x_350851_flow_fi_0_test_page.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+
+	<body>
+		<details>
+		  <summary>
+			  What is the meaning of life?
+			  <span class="arrow">&#10158;</span>
+		  </summary>
+		  <p>
+			  42
+		  </p>
+		</details>
+	</body>
+	
+	
+	
+	
+	
+	
+	<style>
+		details {
+  user-select: none;
+}
+		
+		details>summary {
+			border: 1px solid black;
+			border-radius: 5px;
+		}
+
+details>summary span.arrow {
+  width: 24px;
+  height: 24px;
+  transition: all 0.3s;
+}
+
+details[open] summary span.arrow {
+  transform: rotate(90deg);
+}
+
+summary {
+  display: flex;
+  cursor: pointer;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+	</style>
+</j:jelly>]]></html>
+        <name>test_page</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-17 14:50:09</sys_created_on>
+        <sys_id>1bbc119697803110974bbf1e6253af58</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_name>test_page</sys_name>
+        <sys_package display_value="Flow Finder" source="x_350851_flow_fi_0">18d672eb97132110974bbf1e6253afc8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Flow Finder">18d672eb97132110974bbf1e6253afc8</sys_scope>
+        <sys_update_name>sys_ui_page_1bbc119697803110974bbf1e6253af58</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-17 15:12:25</sys_updated_on>
+    </sys_ui_page>
+</record_update>

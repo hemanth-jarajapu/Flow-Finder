@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="DELETE">
+        <includes/>
+        <macroponent display_value="Order success">5e177aeb1e132110a598a48a4d78bb46</macroponent>
+        <name>confirmation_message_1_caption</name>
+        <preset/>
+        <required_translations>[ {
+  "code" : null,
+  "message" : "Reference Number : ",
+  "comment" : ""
+} ]</required_translations>
+        <script><![CDATA[/**
+ * @param {params} params
+ * @param {api} params.api
+ * @param {any} params.imports
+ */
+function evaluateProperty({
+    api,
+    helpers
+}) {
+    const label = helpers.translateSync("Reference Number : ")
+    return `${label} ${api.state.successNumber}`;
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2023-06-14 11:48:10</sys_created_on>
+        <sys_id>56177aebc213211038c931080ff7f445</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>confirmation_message_1_caption</sys_name>
+        <sys_package display_value="Flow Finder" source="x_350851_flow_fi_0">18d672eb97132110974bbf1e6253afc8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Flow Finder">18d672eb97132110974bbf1e6253afc8</sys_scope>
+        <sys_update_name>sys_ux_client_script_56177aebc213211038c931080ff7f445</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2023-06-14 11:48:10</sys_updated_on>
+        <target/>
+        <type>transform</type>
+    </sys_ux_client_script>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Flow Finder">18d672eb97132110974bbf1e6253afc8</application>
+        <file_path/>
+        <instance_id>1636d6e86f6af900d54da9cc5d3ee472</instance_id>
+        <instance_name>dev10498</instance_name>
+        <name>sys_ux_client_script_56177aebc213211038c931080ff7f445</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ux_client_script"&gt;
+    &lt;sys_ux_client_script action="INSERT_OR_UPDATE"&gt;
+        &lt;includes/&gt;
+        &lt;macroponent display_value="Order success"&gt;5e177aeb1e132110a598a48a4d78bb46&lt;/macroponent&gt;
+        &lt;name&gt;confirmation_message_1_caption&lt;/name&gt;
+        &lt;preset/&gt;
+        &lt;required_translations&gt;[ {
+  "code" : null,
+  "message" : "Reference Number : ",
+  "comment" : ""
+} ]&lt;/required_translations&gt;
+        &lt;script&gt;&lt;![CDATA[/**
+ * @param {params} params
+ * @param {api} params.api
+ * @param {any} params.imports
+ */
+function evaluateProperty({
+    api,
+    helpers
+}) {
+    const label = helpers.translateSync("Reference Number : ")
+    return `${label} ${api.state.successNumber}`;
+}]]&gt;&lt;/script&gt;
+        &lt;script_api_version&gt;2.0.0&lt;/script_api_version&gt;
+        &lt;sys_class_name&gt;sys_ux_client_script&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;system&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2023-06-14 11:48:10&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;56177aebc213211038c931080ff7f445&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+        &lt;sys_name&gt;confirmation_message_1_caption&lt;/sys_name&gt;
+        &lt;sys_package display_value="Flow Finder" source="x_350851_flow_fi_0"&gt;18d672eb97132110974bbf1e6253afc8&lt;/sys_package&gt;
+        &lt;sys_policy/&gt;
+        &lt;sys_scope display_value="Flow Finder"&gt;18d672eb97132110974bbf1e6253afc8&lt;/sys_scope&gt;
+        &lt;sys_update_name&gt;sys_ux_client_script_56177aebc213211038c931080ff7f445&lt;/sys_update_name&gt;
+        &lt;sys_updated_by&gt;system&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2023-06-14 11:48:10&lt;/sys_updated_on&gt;
+        &lt;target/&gt;
+        &lt;type&gt;transform&lt;/type&gt;
+    &lt;/sys_ux_client_script&gt;
+&lt;/record_update&gt;</payload>
+        <payload_hash>1902261727</payload_hash>
+        <record_name>confirmation_message_1_caption</record_name>
+        <reverted_from/>
+        <source>e406d59e97403110974bbf1e6253af9e</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-17 14:18:56</sys_created_on>
+        <sys_id>c9165d9e97403110974bbf1e6253afd7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1896437f4920000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-17 14:18:56</sys_updated_on>
+        <type>UX Client Script</type>
+        <update_guid>c5165d9e28403110e15bfaa239ad28d7</update_guid>
+        <update_guid_history>c5165d9e28403110e15bfaa239ad28d7:0,d595995e60403110d775fde7729ba31e:-1795218602,9995995e6c40311052fb99158c43831b:35192912</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-17 14:37:40</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_client_script">sys_ux_client_script</sys_db_object>
+        <sys_id>04bab476ca79490186343e24ab0d9129</sys_id>
+        <sys_metadata>56177aebc213211038c931080ff7f445</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>confirmation_message_1_caption</sys_name>
+        <sys_package display_value="Flow Finder" source="x_350851_flow_fi_0">18d672eb97132110974bbf1e6253afc8</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Flow Finder">18d672eb97132110974bbf1e6253afc8</sys_scope>
+        <sys_scope_delete display_value="">987de73dd51340699b520bfeba7fe469</sys_scope_delete>
+        <sys_update_name>sys_ux_client_script_56177aebc213211038c931080ff7f445</sys_update_name>
+        <sys_update_version display_value="sys_ux_client_script_56177aebc213211038c931080ff7f445">c9165d9e97403110974bbf1e6253afd7</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-17 14:37:40</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

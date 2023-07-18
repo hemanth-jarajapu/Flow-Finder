@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="DELETE">
+        <includes/>
+        <macroponent display_value="Record Page(request)">1e177aebf813211000219b54fcf4a450</macroponent>
+        <name>display_value_block_1_items</name>
+        <preset/>
+        <required_translations>[ {
+  "code" : null,
+  "message" : "{0}",
+  "comment" : ""
+} ]</required_translations>
+        <script><![CDATA[/**
+ * @param {params} params
+ * @param {api} params.api
+ * @param {TransformApiHelpers} params.helpers
+ */
+function evaluateProperty({
+    api,
+    helpers
+}) {
+    var modelArray = [];
+    var modelData = api.data.look_up_record_1.result;
+    var table = api.state.table;
+    var user = api.context.session.user.fullName;
+    var requestedFor = api.data.look_up_record_3.result.requested_for.displayValue;
+
+    function block(label, type, value) {
+        var out = {};
+        var labelNew =  helpers.translateSync("{0}", label);
+        out.label = labelNew;
+        var outval = {};
+        outval.type = type;
+        outval.value = value;
+        out.value = outval;
+        return out;
+    }
+
+    function getDate(item) {
+        if (item != undefined && item.displayValue != "" && item.displayValue != null) {
+            var itemDate = new Date(item.displayValue);
+            item.displayValue = [itemDate.getFullYear(), itemDate.getMonth() + 1, itemDate.getDate()].join('-');;
+            return item;
+        }
+    }
+
+    function addToModel(item, label) {
+
+        if (item != undefined && item.displayValue != "" && item.displayValue != null) {
+            modelArray.push(block(label, "string", item.displayValue));
+        }
+    }
+    if (table === 'sc_req_item') {
+        addToModel(modelData.state, "State");
+        addToModel(modelData.stage, "Stage");
+        addToModel(getDate(modelData.due_date), "Due date");
+        if (requestedFor != undefined && requestedFor != null && requestedFor != user) {
+            modelArray.push(block("Requested for", "string", requestedFor));
+        }
+        addToModel(modelData.number, "Request number");
+        addToModel(modelData.quantity, "Quantity");
+        addToModel(modelData.price, "Price");
+        var recurringPrice = modelData.recurring_price || {};
+        if (recurringPrice.displayValue && recurringPrice.displayValue.substring(1) !== "0.00") {
+            modelArray.push(block("Recurring price", "string", recurringPrice.displayValue));
+        }
+        addToModel(modelData.recurring_frequency, "Recurring frequency");
+    } else if (table === 'incident') {
+        addToModel(modelData.state, "State");
+        addToModel(getDate(modelData.due_date), "Due date");
+        addToModel(modelData.number, "Request number");
+        addToModel(modelData.caller_id, "Caller");
+        addToModel(modelData.urgency, "Urgency");
+        addToModel(modelData.cmdb_ci, "Configuration item");
+        addToModel(modelData.assigned_to, "Assigned to");
+    } else {
+        addToModel(modelData.state, "State");
+        addToModel(getDate(modelData.due_date), "Due date");
+        addToModel(modelData.number, "Request number");
+    }
+
+    addToModel(getDate(modelData.sys_created_on), "Creation date");
+    addToModel(getDate(modelData.sys_updated_on), "Last update");
+    return modelArray;
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2023-06-14 11:48:10</sys_created_on>
+        <sys_id>92177aebfe1321108e88e130df472445</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>display_value_block_1_items</sys_name>
+        <sys_package display_value="Flow Finder" source="x_350851_flow_fi_0">18d672eb97132110974bbf1e6253afc8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Flow Finder">18d672eb97132110974bbf1e6253afc8</sys_scope>
+        <sys_update_name>sys_ux_client_script_92177aebfe1321108e88e130df472445</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2023-06-14 11:48:10</sys_updated_on>
+        <target/>
+        <type>transform</type>
+    </sys_ux_client_script>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Flow Finder">18d672eb97132110974bbf1e6253afc8</application>
+        <file_path/>
+        <instance_id>1636d6e86f6af900d54da9cc5d3ee472</instance_id>
+        <instance_name>dev10498</instance_name>
+        <name>sys_ux_client_script_92177aebfe1321108e88e130df472445</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ux_client_script"&gt;
+    &lt;sys_ux_client_script action="INSERT_OR_UPDATE"&gt;
+        &lt;includes/&gt;
+        &lt;macroponent display_value="Record Page(request)"&gt;1e177aebf813211000219b54fcf4a450&lt;/macroponent&gt;
+        &lt;name&gt;display_value_block_1_items&lt;/name&gt;
+        &lt;preset/&gt;
+        &lt;required_translations&gt;[ {
+  "code" : null,
+  "message" : "{0}",
+  "comment" : ""
+} ]&lt;/required_translations&gt;
+        &lt;script&gt;&lt;![CDATA[/**
+ * @param {params} params
+ * @param {api} params.api
+ * @param {TransformApiHelpers} params.helpers
+ */
+function evaluateProperty({
+    api,
+    helpers
+}) {
+    var modelArray = [];
+    var modelData = api.data.look_up_record_1.result;
+    var table = api.state.table;
+    var user = api.context.session.user.fullName;
+    var requestedFor = api.data.look_up_record_3.result.requested_for.displayValue;
+
+    function block(label, type, value) {
+        var out = {};
+        var labelNew =  helpers.translateSync("{0}", label);
+        out.label = labelNew;
+        var outval = {};
+        outval.type = type;
+        outval.value = value;
+        out.value = outval;
+        return out;
+    }
+
+    function getDate(item) {
+        if (item != undefined &amp;&amp; item.displayValue != "" &amp;&amp; item.displayValue != null) {
+            var itemDate = new Date(item.displayValue);
+            item.displayValue = [itemDate.getFullYear(), itemDate.getMonth() + 1, itemDate.getDate()].join('-');;
+            return item;
+        }
+    }
+
+    function addToModel(item, label) {
+
+        if (item != undefined &amp;&amp; item.displayValue != "" &amp;&amp; item.displayValue != null) {
+            modelArray.push(block(label, "string", item.displayValue));
+        }
+    }
+    if (table === 'sc_req_item') {
+        addToModel(modelData.state, "State");
+        addToModel(modelData.stage, "Stage");
+        addToModel(getDate(modelData.due_date), "Due date");
+        if (requestedFor != undefined &amp;&amp; requestedFor != null &amp;&amp; requestedFor != user) {
+            modelArray.push(block("Requested for", "string", requestedFor));
+        }
+        addToModel(modelData.number, "Request number");
+        addToModel(modelData.quantity, "Quantity");
+        addToModel(modelData.price, "Price");
+        var recurringPrice = modelData.recurring_price || {};
+        if (recurringPrice.displayValue &amp;&amp; recurringPrice.displayValue.substring(1) !== "0.00") {
+            modelArray.push(block("Recurring price", "string", recurringPrice.displayValue));
+        }
+        addToModel(modelData.recurring_frequency, "Recurring frequency");
+    } else if (table === 'incident') {
+        addToModel(modelData.state, "State");
+        addToModel(getDate(modelData.due_date), "Due date");
+        addToModel(modelData.number, "Request number");
+        addToModel(modelData.caller_id, "Caller");
+        addToModel(modelData.urgency, "Urgency");
+        addToModel(modelData.cmdb_ci, "Configuration item");
+        addToModel(modelData.assigned_to, "Assigned to");
+    } else {
+        addToModel(modelData.state, "State");
+        addToModel(getDate(modelData.due_date), "Due date");
+        addToModel(modelData.number, "Request number");
+    }
+
+    addToModel(getDate(modelData.sys_created_on), "Creation date");
+    addToModel(getDate(modelData.sys_updated_on), "Last update");
+    return modelArray;
+}]]&gt;&lt;/script&gt;
+        &lt;script_api_version&gt;2.0.0&lt;/script_api_version&gt;
+        &lt;sys_class_name&gt;sys_ux_client_script&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;system&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2023-06-14 11:48:10&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;92177aebfe1321108e88e130df472445&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+        &lt;sys_name&gt;display_value_block_1_items&lt;/sys_name&gt;
+        &lt;sys_package display_value="Flow Finder" source="x_350851_flow_fi_0"&gt;18d672eb97132110974bbf1e6253afc8&lt;/sys_package&gt;
+        &lt;sys_policy/&gt;
+        &lt;sys_scope display_value="Flow Finder"&gt;18d672eb97132110974bbf1e6253afc8&lt;/sys_scope&gt;
+        &lt;sys_update_name&gt;sys_ux_client_script_92177aebfe1321108e88e130df472445&lt;/sys_update_name&gt;
+        &lt;sys_updated_by&gt;system&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2023-06-14 11:48:10&lt;/sys_updated_on&gt;
+        &lt;target/&gt;
+        &lt;type&gt;transform&lt;/type&gt;
+    &lt;/sys_ux_client_script&gt;
+&lt;/record_update&gt;</payload>
+        <payload_hash>-379956037</payload_hash>
+        <record_name>display_value_block_1_items</record_name>
+        <reverted_from/>
+        <source>e406d59e97403110974bbf1e6253af9e</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-17 14:18:56</sys_created_on>
+        <sys_id>45165d9e97403110974bbf1e6253afef</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1896437f5d70000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-17 14:18:56</sys_updated_on>
+        <type>UX Client Script</type>
+        <update_guid>41165d9e464031105a8b7fe61dad8bef</update_guid>
+        <update_guid_history>41165d9e464031105a8b7fe61dad8bef:0,9385d55ecb403110d25c6bbcb1c31a88:1454893316,5785d55e2d403110ac964b417fb4d485:1413730461</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-17 14:38:38</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_client_script">sys_ux_client_script</sys_db_object>
+        <sys_id>458a3269cf4e48699724b713d6f04bd1</sys_id>
+        <sys_metadata>92177aebfe1321108e88e130df472445</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>display_value_block_1_items</sys_name>
+        <sys_package display_value="Flow Finder" source="x_350851_flow_fi_0">18d672eb97132110974bbf1e6253afc8</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Flow Finder">18d672eb97132110974bbf1e6253afc8</sys_scope>
+        <sys_scope_delete display_value="">987de73dd51340699b520bfeba7fe469</sys_scope_delete>
+        <sys_update_name>sys_ux_client_script_92177aebfe1321108e88e130df472445</sys_update_name>
+        <sys_update_version display_value="sys_ux_client_script_92177aebfe1321108e88e130df472445">45165d9e97403110974bbf1e6253afef</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-17 14:38:38</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
