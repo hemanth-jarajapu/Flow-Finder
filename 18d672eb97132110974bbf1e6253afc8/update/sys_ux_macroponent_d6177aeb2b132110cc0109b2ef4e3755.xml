@@ -4,202 +4,6 @@
         <category>page</category>
         <component_dependencies/>
         <composition>[ {
-  "elementId" : "alert_1",
-  "elementLabel" : "Alert 1",
-  "propertyValues" : {
-    "preventDefaultAction" : {
-      "type" : "JSON_LITERAL",
-      "value" : false
-    },
-    "defer" : {
-      "type" : "JSON_LITERAL",
-      "value" : true
-    },
-    "size" : {
-      "type" : "JSON_LITERAL",
-      "value" : "md"
-    },
-    "headerLabel" : {
-      "type" : "TRANSLATION_LITERAL",
-      "value" : {
-        "code" : null,
-        "message" : "You have approved the following task",
-        "comment" : ""
-      }
-    },
-    "content" : {
-      "type" : "DATA_OUTPUT_BINDING",
-      "binding" : {
-        "address" : [ "look_up_record_1", "result", "sysapproval", "displayValue" ]
-      }
-    },
-    "buttonLabel" : {
-      "type" : "TRANSLATION_LITERAL",
-      "value" : {
-        "code" : null,
-        "message" : "Got it",
-        "comment" : ""
-      }
-    }
-  },
-  "eventMappings" : [ ],
-  "slot" : null,
-  "definition" : {
-    "id" : "05d8b1515b230010b913cbd59b81c71a",
-    "type" : "MACROPONENT"
-  },
-  "overrides" : null,
-  "isHidden" : {
-    "type" : "JSON_LITERAL",
-    "value" : ""
-  },
-  "isHero" : false,
-  "extensionPoints" : [ ],
-  "isNonDestructive" : false,
-  "items" : [ ],
-  "styles" : null
-}, {
-  "elementId" : "alert_2",
-  "elementLabel" : "Alert 2",
-  "propertyValues" : {
-    "preventDefaultAction" : {
-      "type" : "JSON_LITERAL",
-      "value" : false
-    },
-    "defer" : {
-      "type" : "JSON_LITERAL",
-      "value" : true
-    },
-    "size" : {
-      "type" : "JSON_LITERAL",
-      "value" : "md"
-    },
-    "headerLabel" : {
-      "type" : "TRANSLATION_LITERAL",
-      "value" : {
-        "code" : null,
-        "message" : "You have rejected the following task",
-        "comment" : ""
-      }
-    },
-    "content" : {
-      "type" : "DATA_OUTPUT_BINDING",
-      "binding" : {
-        "address" : [ "look_up_record_1", "result", "sysapproval", "displayValue" ]
-      }
-    },
-    "buttonLabel" : {
-      "type" : "TRANSLATION_LITERAL",
-      "value" : {
-        "code" : null,
-        "message" : "Got it",
-        "comment" : ""
-      }
-    }
-  },
-  "eventMappings" : [ ],
-  "slot" : null,
-  "definition" : {
-    "id" : "05d8b1515b230010b913cbd59b81c71a",
-    "type" : "MACROPONENT"
-  },
-  "overrides" : null,
-  "isHidden" : {
-    "type" : "JSON_LITERAL",
-    "value" : ""
-  },
-  "isHero" : false,
-  "extensionPoints" : [ ],
-  "isNonDestructive" : false,
-  "items" : [ ],
-  "styles" : null
-}, {
-  "elementId" : "modalContainerViewport",
-  "elementLabel" : "Modal Container (Viewport)",
-  "propertyValues" : {
-    "labelledby" : {
-      "type" : "JSON_LITERAL",
-      "value" : ""
-    },
-    "size" : {
-      "type" : "JSON_LITERAL",
-      "value" : "md"
-    },
-    "contents" : {
-      "type" : "DATA_OUTPUT_BINDING",
-      "binding" : {
-        "address" : [ "record", "contents" ]
-      }
-    },
-    "disableDismiss" : {
-      "type" : "JSON_LITERAL",
-      "value" : false
-    },
-    "bare" : {
-      "type" : "DATA_OUTPUT_BINDING",
-      "binding" : {
-        "address" : [ "record", "bare" ]
-      }
-    },
-    "displayOptions" : {
-      "type" : "DATA_OUTPUT_BINDING",
-      "binding" : {
-        "address" : [ "record", "displayOptions" ]
-      }
-    }
-  },
-  "eventMappings" : [ {
-    "eventMappingId" : "clcchhgjhhnzaabbccqddghhgjhuuaabbcii",
-    "isConfiguration" : false,
-    "offRowStorageId" : null,
-    "sourceEventApiName" : "sn_uxf_page.CANVAS_MODAL#CLOSED",
-    "sourceEventCorrelationId" : null,
-    "sourceEventDefinition" : {
-      "apiName" : "sn_uxf_page.CANVAS_MODAL#CLOSED",
-      "id" : null,
-      "type" : "UXEVENT"
-    },
-    "sourceEventSysId" : null,
-    "targets" : [ {
-      "broker" : null,
-      "clientScript" : null,
-      "conditional" : null,
-      "declarativeAction" : null,
-      "event" : null,
-      "operation" : {
-        "dataBrokerId" : "029f04e053610110ac9bddeeff7b1294",
-        "operationName" : "RECORD#CLOSE_MODAL",
-        "parentResourceId" : "record",
-        "payload" : {
-          "type" : "JSON_LITERAL",
-          "value" : { }
-        }
-      },
-      "targetId" : "clcchhgjhhnzaabbccrddghhgvlraaggojjhh",
-      "type" : "DATABROKER_OP"
-    } ]
-  } ],
-  "slot" : null,
-  "definition" : {
-    "id" : "61c315e9ccb8970546c30f3e2da41a32",
-    "type" : "MACROPONENT_VIEWPORT"
-  },
-  "overrides" : null,
-  "isHidden" : {
-    "type" : "JSON_LITERAL",
-    "value" : null
-  },
-  "isHero" : false,
-  "extensionPoints" : [ {
-    "controllerDependencyMap" : { },
-    "controllerElementId" : "form_1",
-    "name" : "Record page modals",
-    "sysId" : "e38960c1c30301103581a5a1d840dd45"
-  } ],
-  "isNonDestructive" : false,
-  "items" : [ ],
-  "styles" : null
-}, {
   "elementId" : "resizable_panes_1",
   "elementLabel" : "Resizable panes 1",
   "propertyValues" : {
@@ -1133,7 +937,7 @@
               "default" : {
                 "children" : null,
                 "isInline" : null,
-                "items" : [{"element_id":"stylized_text_1","styles":{}},{"element_id":"repeater_1","styles":{"box-shadow":"var(--now-static-drop-shadow--md)","border-color":"rgb(var(--now-color--neutral-0))","border-width":"var(--now-static-space--xxs)","border-style":"id","border-radius":"var(--now-static-border-radius--lg)"}}],
+                "items" : [{"element_id":"stylized_text_1","styles":{}},{"element_id":"repeater_1","styles":{"background":"rgb(var(--now-color_surface--brand-1))","box-shadow":"var(--now-static-drop-shadow--md)","border-color":"rgb(var(--now-color--neutral-0))","border-width":"var(--now-static-space--xxs)","border-style":"id","border-radius":"var(--now-static-border-radius--lg)"}}],
                 "root" : null,
                 "rules" : null,
                 "styles" : {"flex-direction":"column"},
@@ -1288,7 +1092,7 @@
                       "propertyValues" : {
                         "css" : {
                           "type" : "JSON_LITERAL",
-                          "value" : "* { }"
+                          "value" : "* { \r\n    text-decoration: underline;\r\n}"
                         },
                         "text" : {
                           "type" : "REPEATER_ITEM_BINDING",
@@ -1461,7 +1265,7 @@
                   "default" : {
                     "children" : null,
                     "isInline" : null,
-                    "items" : [{"element_id":"container_1","styles":{"width":"100%","height":"fit-content","box-shadow":"var(--now-static-drop-shadow--md)","border-color":"rgb(var(--now-color--neutral-0))","border-width":"var(--now-static-space--xxs)","border-style":"id","border-radius":"var(--now-static-border-radius--lg)"}}],
+                    "items" : [{"element_id":"container_1","styles":{"background":"rgb(var(--now-color--neutral-1))","width":"100%","height":"fit-content","box-shadow":"var(--now-static-drop-shadow--md)","border-color":"rgb(var(--now-color--neutral-0))","border-width":"var(--now-static-space--xxs)","border-style":"id","border-radius":"var(--now-static-border-radius--lg)"}}],
                     "root" : null,
                     "rules" : null,
                     "styles" : {"flex-direction":"column","display":"grid","grid-template-columns":"1fr 1fr","grid-template-rows":"1fr 1fr","grid-auto-rows":"1fr","grid-auto-columns":"1fr","gap":"var(--now-static-space--md)"},
@@ -1542,7 +1346,7 @@
         "items" : [{"element_id":"flow_link_container","rules":null,"styles":{"width":"100%","display":"flex","flex-direction":"column"}},{"element_id":"flow_details","rules":null,"styles":{"width":"100%","display":"flex","flex-direction":"column","flex-grow":1.5}}],
         "root" : null,
         "rules" : null,
-        "styles" : {"flex-direction":"column","gap":"var(--now-static-space--lg)"},
+        "styles" : {"flex-direction":"column","gap":"var(--now-static-space--lg)","padding":"var(--now-static-space--sm)"},
         "templateId" : "5832fd4d53c31010e6bcddeeff7b12db",
         "type" : "flex"
       },
@@ -1557,7 +1361,12 @@
   "extensionPoints" : [ ],
   "isNonDestructive" : false,
   "items" : [ ],
-  "styles" : null
+  "styles" : {
+    "border-color" : "rgb(var(--now-color--neutral-7))",
+    "border-width" : "var(--now-static-space--xxs)",
+    "border-style" : "solid",
+    "border-radius" : "var(--now-static-border-radius--lg)"
+  }
 } ]</composition>
         <da_relay_models/>
         <data>[ {
@@ -1876,19 +1685,10 @@
   "message" : "Accessible Label",
   "comment" : ""
 }, {
-  "message" : "Got it",
-  "comment" : ""
-}, {
   "message" : "Trigger Details:",
   "comment" : ""
 }, {
   "message" : "Using:",
-  "comment" : ""
-}, {
-  "message" : "You have approved the following task",
-  "comment" : ""
-}, {
-  "message" : "You have rejected the following task",
   "comment" : ""
 } ]</required_translations>
         <root_component/>
@@ -2010,14 +1810,14 @@
         <sys_created_by>system</sys_created_by>
         <sys_created_on>2023-06-14 11:48:10</sys_created_on>
         <sys_id>d6177aeb2b132110cc0109b2ef4e3755</sys_id>
-        <sys_mod_count>210</sys_mod_count>
+        <sys_mod_count>219</sys_mod_count>
         <sys_name>Landing Page</sys_name>
         <sys_package display_value="Flow Finder" source="x_350851_flow_fi_0">18d672eb97132110974bbf1e6253afc8</sys_package>
         <sys_policy/>
         <sys_scope display_value="Flow Finder">18d672eb97132110974bbf1e6253afc8</sys_scope>
         <sys_update_name>sys_ux_macroponent_d6177aeb2b132110cc0109b2ef4e3755</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-07-18 15:21:03</sys_updated_on>
+        <sys_updated_on>2023-07-20 06:54:07</sys_updated_on>
     </sys_ux_macroponent>
     <sys_translated_text action="delete_multiple" query="documentkey=d6177aeb2b132110cc0109b2ef4e3755"/>
 </record_update>
