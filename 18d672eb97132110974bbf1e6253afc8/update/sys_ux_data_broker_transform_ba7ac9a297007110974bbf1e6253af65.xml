@@ -72,8 +72,13 @@
 				break;
 			}
 			case ("Weekly"): {
-				flowDetails.trigger.push("Time: " + triggerInstance.trigger_inputs.time.getDisplayValue());
 				flowDetails.trigger.push("Day of Week: " + triggerInstance.trigger_inputs.day_of_week.getDisplayValue());
+				flowDetails.trigger.push("Time: " + triggerInstance.trigger_inputs.time.getDisplayValue());
+				break;
+			}
+			case ("Monthly"): {
+				flowDetails.trigger.push("Day of Month: " + triggerInstance.trigger_inputs.day_of_month);
+				flowDetails.trigger.push("Time: " + triggerInstance.trigger_inputs.time.getDisplayValue());
 				break;
 			}
 			case ("Run Once"): {
@@ -82,6 +87,17 @@
 			}
 			case ("Repeat"): {
 				flowDetails.trigger.push("Repeat every: " + triggerInstance.trigger_inputs.repeat.getDisplayValue());
+				break;
+			}
+			case ("REST API - Asynchronous"): {
+				flowDetails.trigger.push("HTTP Method: " + triggerInstance.trigger_inputs.http_method.getDisplayValue());
+				flowDetails.trigger.push("Path: " + triggerInstance.trigger_inputs.base_path + triggerInstance.trigger_inputs.path);
+				flowDetails.trigger.push("Media Type: " + triggerInstance.trigger_inputs.media_type);
+				flowDetails.trigger.push("Requires Authentication: " + triggerInstance.trigger_inputs.requires_authentication);
+				flowDetails.trigger.push("Allow Extrnal Access: " + triggerInstance.trigger_inputs.allow_external_access);
+				if (triggerInstance.trigger_inputs.roles) {
+					flowDetails.trigger.push("Roles Required: " + triggerInstance.trigger_inputs.roles.getDisplayValue());
+				}
 				break;
 			}
 		}
@@ -193,14 +209,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-07-18 08:19:26</sys_created_on>
         <sys_id>ba7ac9a297007110974bbf1e6253af65</sys_id>
-        <sys_mod_count>33</sys_mod_count>
+        <sys_mod_count>36</sys_mod_count>
         <sys_name>Fetch Flow Details</sys_name>
         <sys_package display_value="Flow Finder" source="x_350851_flow_fi_0">18d672eb97132110974bbf1e6253afc8</sys_package>
         <sys_policy/>
         <sys_scope display_value="Flow Finder">18d672eb97132110974bbf1e6253afc8</sys_scope>
         <sys_update_name>sys_ux_data_broker_transform_ba7ac9a297007110974bbf1e6253af65</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-07-18 15:57:46</sys_updated_on>
+        <sys_updated_on>2023-07-20 06:14:30</sys_updated_on>
     </sys_ux_data_broker_transform>
     <sys_translated_text action="delete_multiple" query="documentkey=ba7ac9a297007110974bbf1e6253af65"/>
 </record_update>
