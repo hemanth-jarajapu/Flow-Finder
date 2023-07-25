@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_addon_event_mapping">
+    <sys_ux_addon_event_mapping action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <controller/>
+        <description/>
+        <name>Open Action Finder Page</name>
+        <parent_macroponent display_value="Landing Page">d6177aeb2b132110cc0109b2ef4e3755</parent_macroponent>
+        <source_component/>
+        <source_da display_value="action_finder">52e7543c97507110974bbf1e6253afa6</source_da>
+        <source_element_id>flow_list</source_element_id>
+        <sys_class_name>sys_ux_addon_event_mapping</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-25 04:38:08</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>6c1d187097907110974bbf1e6253af40</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>Open Action Finder Page</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Flow Finder" source="x_350851_flow_fi_0">18d672eb97132110974bbf1e6253afc8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Flow Finder">18d672eb97132110974bbf1e6253afc8</sys_scope>
+        <sys_update_name>sys_ux_addon_event_mapping_6c1d187097907110974bbf1e6253af40</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-25 05:29:32</sys_updated_on>
+        <target_event display_value="Open Action Finder">0dc95c3c97507110974bbf1e6253af98</target_event>
+        <target_payload_mapping>{}</target_payload_mapping>
+    </sys_ux_addon_event_mapping>
+</record_update>

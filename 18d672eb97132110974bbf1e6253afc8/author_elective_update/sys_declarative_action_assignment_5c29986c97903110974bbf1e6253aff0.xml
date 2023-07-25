@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_declarative_action_assignment">
+    <sys_declarative_action_assignment action="DELETE">
+        <action/>
+        <action_attributes>{"configAria":"{\"aria-label\":\"Chat\"}","disabled":"false","tooltipContent":"Open chat window","icon":"chat-fill","hasShadow":"false"}</action_attributes>
+        <action_name>open_test_page</action_name>
+        <action_payload/>
+        <action_type>type</action_type>
+        <active>true</active>
+        <button_type>primary</button_type>
+        <client_action display_value="Open Test Page">068b502097d03110974bbf1e6253af4e</client_action>
+        <client_conditions/>
+        <client_conditions_on_fields/>
+        <client_script><![CDATA[function onClick() { }]]></client_script>
+        <confirmation_message/>
+        <confirmation_required>false</confirmation_required>
+        <create_access>false</create_access>
+        <declarative_action_render_mode/>
+        <declarative_action_type>uxf_client_action</declarative_action_type>
+        <delete_access>false</delete_access>
+        <dependency/>
+        <description/>
+        <design_icon/>
+        <enable_for_all_experiences>false</enable_for_all_experiences>
+        <enabled>true</enabled>
+        <experience_restricted>true</experience_restricted>
+        <field_name/>
+        <field_type>glide_date</field_type>
+        <form_fields_required>false</form_fields_required>
+        <form_position/>
+        <group/>
+        <group_by>false</group_by>
+        <icon/>
+        <label>Open Test page</label>
+        <model display_value="List">c3547169534723003eddddeeff7b126c</model>
+        <model_conditions/>
+        <model_field_required/>
+        <order>1100</order>
+        <payload_map>route=test-page^EQ</payload_map>
+        <read_access>false</read_access>
+        <record_conditions/>
+        <record_selection_required>false</record_selection_required>
+        <required_roles/>
+        <requires_value>false</requires_value>
+        <script_condition/>
+        <scripted_client_condition/>
+        <server_script/>
+        <specificity>41</specificity>
+        <sys_class_name>sys_declarative_action_assignment</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-24 09:42:56</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>5c29986c97903110974bbf1e6253aff0</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>open_test_page</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Flow Finder" source="x_350851_flow_fi_0">18d672eb97132110974bbf1e6253afc8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Flow Finder">18d672eb97132110974bbf1e6253afc8</sys_scope>
+        <sys_update_name>sys_declarative_action_assignment_5c29986c97903110974bbf1e6253aff0</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-24 10:00:29</sys_updated_on>
+        <table>sys_hub_flow</table>
+        <tooltip/>
+        <ui_component/>
+        <view/>
+        <workspace/>
+        <write_access>false</write_access>
+    </sys_declarative_action_assignment>
+    <sys_translated_text action="DELETE" query="documentkey=5c29986c97903110974bbf1e6253aff0"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Flow Finder">18d672eb97132110974bbf1e6253afc8</application>
+        <file_path/>
+        <instance_id>1636d6e86f6af900d54da9cc5d3ee472</instance_id>
+        <instance_name>dev10498</instance_name>
+        <name>sys_declarative_action_assignment_5c29986c97903110974bbf1e6253aff0</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_declarative_action_assignment"&gt;&lt;sys_declarative_action_assignment action="INSERT_OR_UPDATE"&gt;&lt;action/&gt;&lt;action_attributes&gt;{"configAria":"{\"aria-label\":\"Chat\"}","disabled":"false","tooltipContent":"Open chat window","icon":"chat-fill","hasShadow":"false"}&lt;/action_attributes&gt;&lt;action_name&gt;open_test_page&lt;/action_name&gt;&lt;action_payload/&gt;&lt;action_type&gt;type&lt;/action_type&gt;&lt;active&gt;true&lt;/active&gt;&lt;button_type&gt;primary&lt;/button_type&gt;&lt;client_action display_value="Open Test Page"&gt;068b502097d03110974bbf1e6253af4e&lt;/client_action&gt;&lt;client_conditions/&gt;&lt;client_conditions_on_fields/&gt;&lt;client_script&gt;&lt;![CDATA[function onClick() { }]]&gt;&lt;/client_script&gt;&lt;confirmation_message/&gt;&lt;confirmation_required&gt;false&lt;/confirmation_required&gt;&lt;create_access&gt;false&lt;/create_access&gt;&lt;declarative_action_render_mode/&gt;&lt;declarative_action_type&gt;uxf_client_action&lt;/declarative_action_type&gt;&lt;delete_access&gt;false&lt;/delete_access&gt;&lt;dependency/&gt;&lt;description/&gt;&lt;design_icon/&gt;&lt;enable_for_all_experiences&gt;false&lt;/enable_for_all_experiences&gt;&lt;enabled&gt;true&lt;/enabled&gt;&lt;experience_restricted&gt;true&lt;/experience_restricted&gt;&lt;field_name/&gt;&lt;field_type&gt;glide_date&lt;/field_type&gt;&lt;form_fields_required&gt;false&lt;/form_fields_required&gt;&lt;form_position/&gt;&lt;group/&gt;&lt;group_by&gt;false&lt;/group_by&gt;&lt;icon/&gt;&lt;label&gt;Open Test page&lt;/label&gt;&lt;model display_value="List"&gt;c3547169534723003eddddeeff7b126c&lt;/model&gt;&lt;model_conditions/&gt;&lt;model_field_required/&gt;&lt;order&gt;1100&lt;/order&gt;&lt;payload_map&gt;route=test-page^EQ&lt;/payload_map&gt;&lt;read_access&gt;false&lt;/read_access&gt;&lt;record_conditions/&gt;&lt;record_selection_required&gt;false&lt;/record_selection_required&gt;&lt;required_roles/&gt;&lt;requires_value&gt;false&lt;/requires_value&gt;&lt;script_condition/&gt;&lt;scripted_client_condition/&gt;&lt;server_script/&gt;&lt;specificity&gt;41&lt;/specificity&gt;&lt;sys_class_name&gt;sys_declarative_action_assignment&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2023-07-24 09:42:56&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;5c29986c97903110974bbf1e6253aff0&lt;/sys_id&gt;&lt;sys_mod_count&gt;10&lt;/sys_mod_count&gt;&lt;sys_name&gt;open_test_page&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Flow Finder" source="x_350851_flow_fi_0"&gt;18d672eb97132110974bbf1e6253afc8&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Flow Finder"&gt;18d672eb97132110974bbf1e6253afc8&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_declarative_action_assignment_5c29986c97903110974bbf1e6253aff0&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2023-07-24 10:00:29&lt;/sys_updated_on&gt;&lt;table&gt;sys_hub_flow&lt;/table&gt;&lt;tooltip/&gt;&lt;ui_component/&gt;&lt;view/&gt;&lt;workspace/&gt;&lt;write_access&gt;false&lt;/write_access&gt;&lt;/sys_declarative_action_assignment&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=5c29986c97903110974bbf1e6253aff0"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-2079586416</payload_hash>
+        <record_name>open_test_page</record_name>
+        <reverted_from/>
+        <source>dc4695de97403110974bbf1e6253af05</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-24 10:00:29</sys_created_on>
+        <sys_id>1f0e94a097d03110974bbf1e6253af4b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1898757dce50000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-24 10:00:29</sys_updated_on>
+        <type>Action Assignment</type>
+        <update_guid>d30e94a014d0311059e1addf3dec324b</update_guid>
+        <update_guid_history>d30e94a014d0311059e1addf3dec324b:-2079586416,f4fb5c2099d03110171dd567451f4eaf:1377093107,ff5b902074d0311034b9b2084322166a:939871510,fe4b98ec7e903110f2350ee57293b26c:322331661,572bdcecec9031105277d31fb792a168:325220209,7d0b5cecd19031104dcf37c4d152aebb:-862927237,d2fad8ec3d9031101c8f8ade45aa82f6:1511716179,7eead8ecd1903110df4f94ab9ab86c20:-805903996,0cda94ec5490311074c87572d05f1ba7:-862927237,465a1cac22903110c5c3d3a302f63454:-1058025662,d20a98ac1190311034f714bfc267f6ee:953434669</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-24 10:14:46</sys_created_on>
+        <sys_db_object display_value="" name="sys_declarative_action_assignment">sys_declarative_action_assignment</sys_db_object>
+        <sys_id>3416fae136e34bebb79c2ff36671f361</sys_id>
+        <sys_metadata>5c29986c97903110974bbf1e6253aff0</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>open_test_page</sys_name>
+        <sys_package display_value="Flow Finder" source="x_350851_flow_fi_0">18d672eb97132110974bbf1e6253afc8</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Flow Finder">18d672eb97132110974bbf1e6253afc8</sys_scope>
+        <sys_scope_delete display_value="">987de73dd51340699b520bfeba7fe469</sys_scope_delete>
+        <sys_update_name>sys_declarative_action_assignment_5c29986c97903110974bbf1e6253aff0</sys_update_name>
+        <sys_update_version display_value="sys_declarative_action_assignment_5c29986c97903110974bbf1e6253aff0">1f0e94a097d03110974bbf1e6253af4b</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-24 10:14:46</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
