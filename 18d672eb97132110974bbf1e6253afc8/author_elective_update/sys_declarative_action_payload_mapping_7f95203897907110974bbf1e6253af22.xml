@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_declarative_action_payload_mapping">
+    <sys_declarative_action_payload_mapping action="DELETE">
+        <action_payload_definition display_value="Open Action Finder">675fdcf097907110974bbf1e6253af5a</action_payload_definition>
+        <label>Open Action Finder  Form</label>
+        <model display_value="Form">360935e9534723003eddddeeff7b127d</model>
+        <payload_map>EQ</payload_map>
+        <sys_class_name>sys_declarative_action_payload_mapping</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-25 05:12:02</sys_created_on>
+        <sys_id>7f95203897907110974bbf1e6253af22</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Open Action Finder  Form</sys_name>
+        <sys_package display_value="Flow Finder" source="x_350851_flow_fi_0">18d672eb97132110974bbf1e6253afc8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Flow Finder">18d672eb97132110974bbf1e6253afc8</sys_scope>
+        <sys_update_name>sys_declarative_action_payload_mapping_7f95203897907110974bbf1e6253af22</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-25 05:12:02</sys_updated_on>
+    </sys_declarative_action_payload_mapping>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Flow Finder">18d672eb97132110974bbf1e6253afc8</application>
+        <file_path/>
+        <instance_id>1636d6e86f6af900d54da9cc5d3ee472</instance_id>
+        <instance_name>dev10498</instance_name>
+        <name>sys_declarative_action_payload_mapping_7f95203897907110974bbf1e6253af22</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_declarative_action_payload_mapping"><sys_declarative_action_payload_mapping action="INSERT_OR_UPDATE"><action_payload_definition display_value="Open Action Finder">675fdcf097907110974bbf1e6253af5a</action_payload_definition><label>Open Action Finder  Form</label><model display_value="Form">360935e9534723003eddddeeff7b127d</model><payload_map>EQ</payload_map><sys_class_name>sys_declarative_action_payload_mapping</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-07-25 05:12:02</sys_created_on><sys_id>7f95203897907110974bbf1e6253af22</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Open Action Finder  Form</sys_name><sys_package display_value="Flow Finder" source="x_350851_flow_fi_0">18d672eb97132110974bbf1e6253afc8</sys_package><sys_policy/><sys_scope display_value="Flow Finder">18d672eb97132110974bbf1e6253afc8</sys_scope><sys_update_name>sys_declarative_action_payload_mapping_7f95203897907110974bbf1e6253af22</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-07-25 05:12:02</sys_updated_on></sys_declarative_action_payload_mapping></record_update>]]></payload>
+        <payload_hash>-2074435449</payload_hash>
+        <record_name>Open Action Finder  Form</record_name>
+        <reverted_from/>
+        <source>dc4695de97403110974bbf1e6253af05</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-25 05:12:02</sys_created_on>
+        <sys_id>7b95203897907110974bbf1e6253af24</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1898b7623260000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-25 05:12:02</sys_updated_on>
+        <type>Action Payload Mapping</type>
+        <update_guid>bf95203878907110ae35238f4e946423</update_guid>
+        <update_guid_history>bf95203878907110ae35238f4e946423:-2074435449</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-25 05:12:24</sys_created_on>
+        <sys_db_object display_value="" name="sys_declarative_action_payload_mapping">sys_declarative_action_payload_mapping</sys_db_object>
+        <sys_id>153a376fc89a47519bbb3a0c0f648c29</sys_id>
+        <sys_metadata>7f95203897907110974bbf1e6253af22</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Open Action Finder  Form</sys_name>
+        <sys_package display_value="Flow Finder" source="x_350851_flow_fi_0">18d672eb97132110974bbf1e6253afc8</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Flow Finder">18d672eb97132110974bbf1e6253afc8</sys_scope>
+        <sys_scope_delete display_value="">987de73dd51340699b520bfeba7fe469</sys_scope_delete>
+        <sys_update_name>sys_declarative_action_payload_mapping_7f95203897907110974bbf1e6253af22</sys_update_name>
+        <sys_update_version display_value="sys_declarative_action_payload_mapping_7f95203897907110974bbf1e6253af22">7b95203897907110974bbf1e6253af24</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-25 05:12:24</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_app_route">
+    <sys_ux_app_route action="DELETE">
+        <app_config display_value="Flow Finder Config">0a177aeb97132110974bbf1e6253af08</app_config>
+        <description/>
+        <extension_point/>
+        <fields>table,sysId</fields>
+        <icon/>
+        <name>Action Finder</name>
+        <optional_parameters>query,views,activityLogs,extraParams,fields,screen,selectedTabIndex,userPrefs</optional_parameters>
+        <order>0</order>
+        <parent_macroponent display_value="Portal App Shell">b66bf1075b31101016fd7c1bf481c7a7</parent_macroponent>
+        <parent_macroponent_composition_element_id/>
+        <route_type>action-finder</route_type>
+        <screen_type display_value="Test Page">f00b511697803110974bbf1e6253afdd</screen_type>
+        <sys_class_name>sys_ux_app_route</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-17 14:40:29</sys_created_on>
+        <sys_id>740bd11697803110974bbf1e6253af78</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Action Finder</sys_name>
+        <sys_package display_value="Flow Finder" source="x_350851_flow_fi_0">18d672eb97132110974bbf1e6253afc8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Flow Finder">18d672eb97132110974bbf1e6253afc8</sys_scope>
+        <sys_update_name>sys_ux_app_route_740bd11697803110974bbf1e6253af78</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-26 12:23:56</sys_updated_on>
+    </sys_ux_app_route>
+    <sys_translated_text action="DELETE" query="documentkey=740bd11697803110974bbf1e6253af78"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Flow Finder">18d672eb97132110974bbf1e6253afc8</application>
+        <file_path/>
+        <instance_id>1636d6e86f6af900d54da9cc5d3ee472</instance_id>
+        <instance_name>dev10498</instance_name>
+        <name>sys_ux_app_route_740bd11697803110974bbf1e6253af78</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_app_route"><sys_ux_app_route action="INSERT_OR_UPDATE"><app_config display_value="Flow Finder Config">0a177aeb97132110974bbf1e6253af08</app_config><description/><extension_point/><fields>table,sysId</fields><icon/><name>Action Finder</name><optional_parameters>query,views,activityLogs,extraParams,fields,screen,selectedTabIndex,userPrefs</optional_parameters><order>0</order><parent_macroponent display_value="Portal App Shell">b66bf1075b31101016fd7c1bf481c7a7</parent_macroponent><parent_macroponent_composition_element_id/><route_type>action-finder</route_type><screen_type display_value="Test Page">f00b511697803110974bbf1e6253afdd</screen_type><sys_class_name>sys_ux_app_route</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-07-17 14:40:29</sys_created_on><sys_id>740bd11697803110974bbf1e6253af78</sys_id><sys_mod_count>2</sys_mod_count><sys_name>Action Finder</sys_name><sys_package display_value="Flow Finder" source="x_350851_flow_fi_0">18d672eb97132110974bbf1e6253afc8</sys_package><sys_policy/><sys_scope display_value="Flow Finder">18d672eb97132110974bbf1e6253afc8</sys_scope><sys_update_name>sys_ux_app_route_740bd11697803110974bbf1e6253af78</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-07-26 12:23:56</sys_updated_on></sys_ux_app_route><sys_translated_text action="delete_multiple" query="documentkey=740bd11697803110974bbf1e6253af78"/></record_update>]]></payload>
+        <payload_hash>-1394138044</payload_hash>
+        <record_name>Action Finder</record_name>
+        <reverted_from/>
+        <source>dc4695de97403110974bbf1e6253af05</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-26 12:23:56</sys_created_on>
+        <sys_id>d812570597543110974bbf1e6253af37</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1899227e9430000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-26 12:23:56</sys_updated_on>
+        <type>UX App Route</type>
+        <update_guid>90125705db5431103a94a9d16bed5837</update_guid>
+        <update_guid_history>90125705db5431103a94a9d16bed5837:-1394138044,fc0fcfcd2714311080246f5f75fa898b:890843462,882b38678f4031109a4227d4ad7ac76f:0,b80bd116da803110858e9b0103f81279:-643940883</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-26 12:29:52</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_app_route">sys_ux_app_route</sys_db_object>
+        <sys_id>1316600cc18247a0a6877118913671d1</sys_id>
+        <sys_metadata>740bd11697803110974bbf1e6253af78</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Action Finder</sys_name>
+        <sys_package display_value="Flow Finder" source="x_350851_flow_fi_0">18d672eb97132110974bbf1e6253afc8</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Flow Finder">18d672eb97132110974bbf1e6253afc8</sys_scope>
+        <sys_scope_delete display_value="">987de73dd51340699b520bfeba7fe469</sys_scope_delete>
+        <sys_update_name>sys_ux_app_route_740bd11697803110974bbf1e6253af78</sys_update_name>
+        <sys_update_version display_value="sys_ux_app_route_740bd11697803110974bbf1e6253af78">d812570597543110974bbf1e6253af37</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-26 12:29:52</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

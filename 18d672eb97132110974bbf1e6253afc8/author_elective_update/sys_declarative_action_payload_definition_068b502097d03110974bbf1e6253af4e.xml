@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_declarative_action_payload_definition">
+    <sys_declarative_action_payload_definition action="DELETE">
+        <action_key>MODAL_SELECTED_RELAY</action_key>
+        <applicable_to>c3547169534723003eddddeeff7b126c</applicable_to>
+        <description/>
+        <label>Open Test Page</label>
+        <payload_field_table>var__m_sys_declarative_action_payload_field_068b502097d03110974bbf1e6253af4e</payload_field_table>
+        <payload_template>{&#13;
+"modalId": "display_flow_details"&#13;
+}</payload_template>
+        <sys_class_name>sys_declarative_action_payload_definition</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-24 09:49:52</sys_created_on>
+        <sys_id>068b502097d03110974bbf1e6253af4e</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Open Test Page</sys_name>
+        <sys_package display_value="Flow Finder" source="x_350851_flow_fi_0">18d672eb97132110974bbf1e6253afc8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Flow Finder">18d672eb97132110974bbf1e6253afc8</sys_scope>
+        <sys_update_name>sys_declarative_action_payload_definition_068b502097d03110974bbf1e6253af4e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-24 10:04:21</sys_updated_on>
+    </sys_declarative_action_payload_definition>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Flow Finder">18d672eb97132110974bbf1e6253afc8</application>
+        <file_path/>
+        <instance_id>1636d6e86f6af900d54da9cc5d3ee472</instance_id>
+        <instance_name>dev10498</instance_name>
+        <name>sys_declarative_action_payload_definition_068b502097d03110974bbf1e6253af4e</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_declarative_action_payload_definition"><sys_declarative_action_payload_definition action="INSERT_OR_UPDATE"><action_key>MODAL_SELECTED_RELAY</action_key><applicable_to>c3547169534723003eddddeeff7b126c</applicable_to><description/><label>Open Test Page</label><payload_field_table>var__m_sys_declarative_action_payload_field_068b502097d03110974bbf1e6253af4e</payload_field_table><payload_template>{&#13;
+"modalId": "display_flow_details"&#13;
+}</payload_template><sys_class_name>sys_declarative_action_payload_definition</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-07-24 09:49:52</sys_created_on><sys_id>068b502097d03110974bbf1e6253af4e</sys_id><sys_mod_count>5</sys_mod_count><sys_name>Open Test Page</sys_name><sys_package display_value="Flow Finder" source="x_350851_flow_fi_0">18d672eb97132110974bbf1e6253afc8</sys_package><sys_policy/><sys_scope display_value="Flow Finder">18d672eb97132110974bbf1e6253afc8</sys_scope><sys_update_name>sys_declarative_action_payload_definition_068b502097d03110974bbf1e6253af4e</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-07-24 10:04:21</sys_updated_on></sys_declarative_action_payload_definition></record_update>]]></payload>
+        <payload_hash>1283220235</payload_hash>
+        <record_name>Open Test Page</record_name>
+        <reverted_from/>
+        <source>dc4695de97403110974bbf1e6253af05</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-24 10:04:21</sys_created_on>
+        <sys_id>88fed42497d03110974bbf1e6253afed</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>189875b675c0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-24 10:04:21</sys_updated_on>
+        <type>Action Payload Definition</type>
+        <update_guid>40fed424e7d03110dad452b8089856ed</update_guid>
+        <update_guid_history>40fed424e7d03110dad452b8089856ed:1283220235,6ade94240dd03110809b92d2c6879f56:-360164831,252d50a02cd03110c75d4ef3a931ed9e:1729022320,86fcdc20c5d0311091155ac8dc4c6c74:-423200151,a9eb1c20f2d031108f642e8f406373e4:-370304977,ff9b1420c9d03110f20568c20c3bb438:-2070403972</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-24 10:14:58</sys_created_on>
+        <sys_db_object display_value="" name="sys_declarative_action_payload_definition">sys_declarative_action_payload_definition</sys_db_object>
+        <sys_id>646c48af92ff42b8b59f726974a4a491</sys_id>
+        <sys_metadata>068b502097d03110974bbf1e6253af4e</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Open Test Page</sys_name>
+        <sys_package display_value="Flow Finder" source="x_350851_flow_fi_0">18d672eb97132110974bbf1e6253afc8</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Flow Finder">18d672eb97132110974bbf1e6253afc8</sys_scope>
+        <sys_scope_delete display_value="">987de73dd51340699b520bfeba7fe469</sys_scope_delete>
+        <sys_update_name>sys_declarative_action_payload_definition_068b502097d03110974bbf1e6253af4e</sys_update_name>
+        <sys_update_version display_value="sys_declarative_action_payload_definition_068b502097d03110974bbf1e6253af4e">88fed42497d03110974bbf1e6253afed</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-24 10:14:58</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
