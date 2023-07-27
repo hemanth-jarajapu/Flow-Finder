@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section action="DELETE" caption="Trigger" section_id="86a11fc197543110974bbf1e6253afc0" sys_domain="global" table="x_350851_flow_fi_0_flow_finder_form" version="3" view="Action_Finder">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>trigger_type</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-07-26 12:22:09</sys_created_on>
+            <sys_id>02a11fc197543110974bbf1e6253afd4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Trigger" display_value="Trigger" name="x_350851_flow_fi_0_flow_finder_form" sys_domain="global" view="c2a11fc197543110974bbf1e6253afba">86a11fc197543110974bbf1e6253afc0</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-07-26 12:22:09</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>trigger_table</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-07-26 12:22:09</sys_created_on>
+            <sys_id>06a11fc197543110974bbf1e6253afd4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Trigger" display_value="Trigger" name="x_350851_flow_fi_0_flow_finder_form" sys_domain="global" view="c2a11fc197543110974bbf1e6253afba">86a11fc197543110974bbf1e6253afc0</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-07-26 12:22:09</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="DELETE">
+            <caption>Trigger</caption>
+            <header>false</header>
+            <name>x_350851_flow_fi_0_flow_finder_form</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-07-26 12:22:09</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>86a11fc197543110974bbf1e6253afc0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_350851_flow_fi_0_flow_finder_form</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Flow Finder" source="x_350851_flow_fi_0">18d672eb97132110974bbf1e6253afc8</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Flow Finder">18d672eb97132110974bbf1e6253afc8</sys_scope>
+            <sys_update_name>sys_ui_section_86a11fc197543110974bbf1e6253afc0</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-07-26 12:22:09</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Action Finder" name="Action_Finder">c2a11fc197543110974bbf1e6253afba</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Flow Finder">18d672eb97132110974bbf1e6253afc8</application>
+        <file_path/>
+        <instance_id>1636d6e86f6af900d54da9cc5d3ee472</instance_id>
+        <instance_name>dev10498</instance_name>
+        <name>sys_ui_section_86a11fc197543110974bbf1e6253afc0</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_ui_section caption="Trigger" section_id="86a11fc197543110974bbf1e6253afc0" sys_domain="global" table="x_350851_flow_fi_0_flow_finder_form" version="3" view="Action_Finder"><sys_ui_element action="INSERT_OR_UPDATE"><element>trigger_type</element><position>0</position><sys_created_by>admin</sys_created_by><sys_created_on>2023-07-26 12:22:09</sys_created_on><sys_id>02a11fc197543110974bbf1e6253afd4</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="Trigger" display_value="Trigger" name="x_350851_flow_fi_0_flow_finder_form" sys_domain="global" view="c2a11fc197543110974bbf1e6253afba">86a11fc197543110974bbf1e6253afc0</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-07-26 12:22:09</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>trigger_table</element><position>1</position><sys_created_by>admin</sys_created_by><sys_created_on>2023-07-26 12:22:09</sys_created_on><sys_id>06a11fc197543110974bbf1e6253afd4</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="Trigger" display_value="Trigger" name="x_350851_flow_fi_0_flow_finder_form" sys_domain="global" view="c2a11fc197543110974bbf1e6253afba">86a11fc197543110974bbf1e6253afc0</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-07-26 12:22:09</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_section action="INSERT_OR_UPDATE"><caption>Trigger</caption><header>false</header><name>x_350851_flow_fi_0_flow_finder_form</name><roles/><sys_class_name>sys_ui_section</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-07-26 12:22:09</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>86a11fc197543110974bbf1e6253afc0</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_350851_flow_fi_0_flow_finder_form</sys_name><sys_overrides/><sys_package display_value="Flow Finder" source="x_350851_flow_fi_0">18d672eb97132110974bbf1e6253afc8</sys_package><sys_policy/><sys_scope display_value="Flow Finder">18d672eb97132110974bbf1e6253afc8</sys_scope><sys_update_name>sys_ui_section_86a11fc197543110974bbf1e6253afc0</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-07-26 12:22:09</sys_updated_on><sys_user/><title>false</title><view display_value="Action Finder" name="Action_Finder">c2a11fc197543110974bbf1e6253afba</view><view_name/></sys_ui_section></sys_ui_section></record_update>]]></payload>
+        <payload_hash>-1963299426</payload_hash>
+        <record_name>Flow Finder</record_name>
+        <reverted_from/>
+        <source>dc4695de97403110974bbf1e6253af05</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-26 12:22:09</sys_created_on>
+        <sys_id>c2a11fc197543110974bbf1e6253afd6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>189922647670000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-26 12:22:09</sys_updated_on>
+        <type>Form Layout</type>
+        <update_guid>4aa11fc15a54311037387a16823fced5</update_guid>
+        <update_guid_history>4aa11fc15a54311037387a16823fced5:-1963299426</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-26 12:22:43</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_section">sys_ui_section</sys_db_object>
+        <sys_id>9f1dada188924c04895f61f475334441</sys_id>
+        <sys_metadata>86a11fc197543110974bbf1e6253afc0</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Trigger</sys_name>
+        <sys_package display_value="Flow Finder" source="x_350851_flow_fi_0">18d672eb97132110974bbf1e6253afc8</sys_package>
+        <sys_parent display_value="Flow Finder">a23c3f7b97d36110974bbf1e6253af03</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Flow Finder">18d672eb97132110974bbf1e6253afc8</sys_scope>
+        <sys_scope_delete display_value="">987de73dd51340699b520bfeba7fe469</sys_scope_delete>
+        <sys_update_name>sys_ui_section_86a11fc197543110974bbf1e6253afc0</sys_update_name>
+        <sys_update_version display_value="sys_ui_section_86a11fc197543110974bbf1e6253afc0">c2a11fc197543110974bbf1e6253afd6</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-26 12:22:43</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

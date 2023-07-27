@@ -5,8 +5,8 @@
         <action_name>action_finder</action_name>
         <action_payload/>
         <action_type>type</action_type>
-        <active>false</active>
-        <button_type>secondary</button_type>
+        <active>true</active>
+        <button_type>primary</button_type>
         <client_action display_value="Open Action Finder">675fdcf097907110974bbf1e6253af5a</client_action>
         <client_conditions/>
         <client_conditions_on_fields/>
@@ -53,7 +53,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>52e7543c97507110974bbf1e6253afa6</sys_id>
-        <sys_mod_count>18</sys_mod_count>
+        <sys_mod_count>23</sys_mod_count>
         <sys_name>action_finder</sys_name>
         <sys_overrides/>
         <sys_package display_value="Flow Finder" source="x_350851_flow_fi_0">18d672eb97132110974bbf1e6253afc8</sys_package>
@@ -61,7 +61,7 @@
         <sys_scope display_value="Flow Finder">18d672eb97132110974bbf1e6253afc8</sys_scope>
         <sys_update_name>sys_declarative_action_assignment_52e7543c97507110974bbf1e6253afa6</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-07-25 05:30:48</sys_updated_on>
+        <sys_updated_on>2023-07-26 12:00:13</sys_updated_on>
         <table>sys_hub_flow</table>
         <tooltip/>
         <ui_component/>
