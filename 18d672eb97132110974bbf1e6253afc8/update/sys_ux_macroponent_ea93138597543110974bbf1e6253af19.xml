@@ -146,8 +146,8 @@
         "box-shadow" : "var(--now-static-drop-shadow--md)"
       }
     }, {
-      "elementId" : "list_1",
-      "elementLabel" : "List 1",
+      "elementId" : "action_list",
+      "elementLabel" : "Action List",
       "propertyValues" : {
         "hideUnnecessaryRowSelectors" : {
           "type" : "JSON_LITERAL",
@@ -449,7 +449,42 @@
           "value" : false
         }
       },
-      "eventMappings" : [ ],
+      "eventMappings" : [ {
+        "eventMappingId" : "clklddvefwaaddddzccahhnbmmxzuaax",
+        "isConfiguration" : false,
+        "offRowStorageId" : null,
+        "sourceEventApiName" : "sn_record_list_con.NOW_RECORD_LIST_CONNECTED#ROW_CLICKED",
+        "sourceEventCorrelationId" : null,
+        "sourceEventDefinition" : {
+          "apiName" : "sn_record_list_con.NOW_RECORD_LIST_CONNECTED#ROW_CLICKED",
+          "id" : null,
+          "type" : "UXEVENT"
+        },
+        "sourceEventSysId" : null,
+        "targets" : [ {
+          "broker" : null,
+          "clientScript" : null,
+          "conditional" : null,
+          "declarativeAction" : null,
+          "event" : {
+            "apiName" : "x_350851_flow_fi_0.NAV_ITEM_SELECTED_RELAY_ea93138597543110974bbf1e6253af19",
+            "payload" : {
+              "type" : "CLIENT_TRANSFORM_SCRIPT",
+              "script" : {
+                "apiVersion" : "1.0.0",
+                "controllerElementId" : null,
+                "inlineScript" : "/**\n * @param {params} params\n * @param {api} params.api\n * @param {any} params.event\n */\nfunction evaluateEvent({api, event}) {\n    var actionLink = \"\";\n    if (event.payload.sys_id) {\n        actionLink = event.payload.table + \".do?sys_id=\" + event.payload.sys_id;\n    }\n\n    return {\n        route: null,\n        fields: null,\n        params: null,\n        redirect: null,\n        passiveNavigation: null,\n        title: null,\n        multiInstField: null,\n        targetRoute: null,\n        external: {\n            \"url\": actionLink\n        }\n    };\n}",
+                "scriptSysId" : null,
+                "target" : null
+              }
+            },
+            "sysId" : "5ce35ced97d47110974bbf1e6253af98"
+          },
+          "operation" : null,
+          "targetId" : "clklggnlsffaacceehccabgggbbdbbiicuk",
+          "type" : "EVENT"
+        } ]
+      } ],
       "slot" : "right",
       "definition" : {
         "id" : "66ee7d86e81f696c9f9be19d8424cc0d",
@@ -815,14 +850,42 @@
   "readEvaluationMode" : "EAGER"
 } ]</data>
         <description/>
-        <dispatched_events/>
+        <dispatched_events>5ce35ced97d47110974bbf1e6253af98</dispatched_events>
         <ext_controller_dep/>
         <extends display_value="Page Template">19be392623033300f4b4c50947bf65ba</extends>
         <extension_point/>
-        <handled_events/>
+        <handled_events>cbb358ed97d47110974bbf1e6253afcd</handled_events>
         <interactions/>
         <interfaces/>
-        <internal_event_mappings>{ }</internal_event_mappings>
+        <internal_event_mappings>{
+  "x_350851_flow_fi_0.OPEN_FLOW_FINDER" : [ {
+    "broker" : null,
+    "clientScript" : null,
+    "conditional" : null,
+    "declarativeAction" : null,
+    "event" : {
+      "apiName" : "x_350851_flow_fi_0.NAV_ITEM_SELECTED_RELAY_ea93138597543110974bbf1e6253af19",
+      "payload" : {
+        "type" : "JSON_LITERAL",
+        "value" : {
+          "route" : "home",
+          "fields" : null,
+          "params" : null,
+          "redirect" : null,
+          "passiveNavigation" : null,
+          "title" : "Home",
+          "multiInstField" : null,
+          "targetRoute" : null,
+          "external" : null
+        }
+      },
+      "sysId" : "5ce35ced97d47110974bbf1e6253af98"
+    },
+    "operation" : null,
+    "targetId" : "clkldddsjgaaddbbhccahhnaddccbbguvg",
+    "type" : "EVENT"
+  } ]
+}</internal_event_mappings>
         <layout>{
   "default" : {
     "children" : null,
@@ -850,14 +913,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-07-26 12:30:39</sys_created_on>
         <sys_id>ea93138597543110974bbf1e6253af19</sys_id>
-        <sys_mod_count>12</sys_mod_count>
+        <sys_mod_count>28</sys_mod_count>
         <sys_name>Default</sys_name>
         <sys_package display_value="Flow Finder" source="x_350851_flow_fi_0">18d672eb97132110974bbf1e6253afc8</sys_package>
         <sys_policy/>
         <sys_scope display_value="Flow Finder">18d672eb97132110974bbf1e6253afc8</sys_scope>
         <sys_update_name>sys_ux_macroponent_ea93138597543110974bbf1e6253af19</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-07-26 16:49:53</sys_updated_on>
+        <sys_updated_on>2023-07-27 13:23:32</sys_updated_on>
     </sys_ux_macroponent>
     <sys_translated_text action="delete_multiple" query="documentkey=ea93138597543110974bbf1e6253af19"/>
 </record_update>
