@@ -2,22 +2,22 @@
     <sys_declarative_action_assignment action="INSERT_OR_UPDATE">
         <action/>
         <action_attributes/>
-        <action_name>open_fd_from_af</action_name>
+        <action_name>flow_finder</action_name>
         <action_payload/>
         <action_type>type</action_type>
         <active>true</active>
         <button_type>primary</button_type>
-        <client_action/>
+        <client_action display_value="Open Action Finder">675fdcf097907110974bbf1e6253af5a</client_action>
         <client_conditions/>
         <client_conditions_on_fields/>
         <client_script><![CDATA[function onClick() {
-	open("$flow-designer.do?sysparm_use_polaris=false#/", "_blank");
+	
 }]]></client_script>
         <confirmation_message/>
         <confirmation_required>false</confirmation_required>
         <create_access>false</create_access>
         <declarative_action_render_mode/>
-        <declarative_action_type>client_script</declarative_action_type>
+        <declarative_action_type>uxf_client_action</declarative_action_type>
         <delete_access>false</delete_access>
         <dependency/>
         <description/>
@@ -32,11 +32,11 @@
         <group/>
         <group_by>false</group_by>
         <icon/>
-        <label>Flow Designer ↗</label>
+        <label>Flow Finder</label>
         <model display_value="List">c3547169534723003eddddeeff7b126c</model>
         <model_conditions/>
         <model_field_required/>
-        <order>1200</order>
+        <order>1100</order>
         <payload_map/>
         <read_access>false</read_access>
         <record_conditions/>
@@ -46,28 +46,28 @@
         <script_condition/>
         <scripted_client_condition/>
         <server_script/>
-        <specificity>41</specificity>
+        <specificity>31</specificity>
         <sys_class_name>sys_declarative_action_assignment</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-07-15 16:35:41</sys_created_on>
+        <sys_created_on>2023-07-27 07:40:16</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>a8f1e769974cb110974bbf1e6253afc6</sys_id>
-        <sys_mod_count>10</sys_mod_count>
-        <sys_name>open_fd_from_af</sys_name>
+        <sys_id>feba139997147110974bbf1e6253afae</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>flow_finder</sys_name>
         <sys_overrides/>
         <sys_package display_value="Flow Finder" source="x_350851_flow_fi_0">18d672eb97132110974bbf1e6253afc8</sys_package>
         <sys_policy/>
         <sys_scope display_value="Flow Finder">18d672eb97132110974bbf1e6253afc8</sys_scope>
-        <sys_update_name>sys_declarative_action_assignment_a8f1e769974cb110974bbf1e6253afc6</sys_update_name>
+        <sys_update_name>sys_declarative_action_assignment_feba139997147110974bbf1e6253afae</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-07-27 07:37:30</sys_updated_on>
-        <table>sys_hub_flow</table>
+        <sys_updated_on>2023-07-27 07:40:16</sys_updated_on>
+        <table>sys_hub_action_type_definition</table>
         <tooltip/>
         <ui_component/>
         <view/>
         <workspace/>
         <write_access>false</write_access>
     </sys_declarative_action_assignment>
-    <sys_translated_text action="delete_multiple" query="documentkey=a8f1e769974cb110974bbf1e6253afc6"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=feba139997147110974bbf1e6253afae"/>
 </record_update>

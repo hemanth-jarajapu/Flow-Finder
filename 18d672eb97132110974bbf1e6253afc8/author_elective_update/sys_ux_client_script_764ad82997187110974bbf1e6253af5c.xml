@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="DELETE">
+        <includes/>
+        <macroponent display_value="Default">ea93138597543110974bbf1e6253af19</macroponent>
+        <name>Open Action in FD</name>
+        <preset/>
+        <required_translations>[ ]</required_translations>
+        <script><![CDATA[/**
+* @param {params} params
+* @param {api} params.api
+* @param {any} params.event
+* @param {any} params.imports
+* @param {ApiHelpers} params.helpers
+*/
+function handler({api, event, helpers, imports}) {
+    if(!event.payload.sys_id){
+        return;
+    }
+
+    var actionLink = event.payload.table + ".do?sys_id=" + event.payload.sys_id;
+    console.log("Link:\n" + actionLink);
+    helpers.navigate.to(actionLink);
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-27 12:17:59</sys_created_on>
+        <sys_id>764ad82997187110974bbf1e6253af5c</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Open Action in FD</sys_name>
+        <sys_package display_value="Flow Finder" source="x_350851_flow_fi_0">18d672eb97132110974bbf1e6253afc8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Flow Finder">18d672eb97132110974bbf1e6253afc8</sys_scope>
+        <sys_update_name>sys_ux_client_script_764ad82997187110974bbf1e6253af5c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-27 12:22:45</sys_updated_on>
+        <target>macroponent</target>
+        <type>default</type>
+    </sys_ux_client_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Flow Finder">18d672eb97132110974bbf1e6253afc8</application>
+        <file_path/>
+        <instance_id>1636d6e86f6af900d54da9cc5d3ee472</instance_id>
+        <instance_name>dev10498</instance_name>
+        <name>sys_ux_client_script_764ad82997187110974bbf1e6253af5c</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ux_client_script"&gt;&lt;sys_ux_client_script action="INSERT_OR_UPDATE"&gt;&lt;includes/&gt;&lt;macroponent display_value="Default"&gt;ea93138597543110974bbf1e6253af19&lt;/macroponent&gt;&lt;name&gt;Open Action in FD&lt;/name&gt;&lt;preset/&gt;&lt;required_translations&gt;[ ]&lt;/required_translations&gt;&lt;script&gt;&lt;![CDATA[/**
+* @param {params} params
+* @param {api} params.api
+* @param {any} params.event
+* @param {any} params.imports
+* @param {ApiHelpers} params.helpers
+*/
+function handler({api, event, helpers, imports}) {
+    if(!event.payload.sys_id){
+        return;
+    }
+
+    var actionLink = event.payload.table + ".do?sys_id=" + event.payload.sys_id;
+    console.log("Link:\n" + actionLink);
+    helpers.navigate.to(actionLink);
+}]]&gt;&lt;/script&gt;&lt;script_api_version&gt;2.0.0&lt;/script_api_version&gt;&lt;sys_class_name&gt;sys_ux_client_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2023-07-27 12:17:59&lt;/sys_created_on&gt;&lt;sys_id&gt;764ad82997187110974bbf1e6253af5c&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;Open Action in FD&lt;/sys_name&gt;&lt;sys_package display_value="Flow Finder" source="x_350851_flow_fi_0"&gt;18d672eb97132110974bbf1e6253afc8&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Flow Finder"&gt;18d672eb97132110974bbf1e6253afc8&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ux_client_script_764ad82997187110974bbf1e6253af5c&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2023-07-27 12:22:45&lt;/sys_updated_on&gt;&lt;target&gt;macroponent&lt;/target&gt;&lt;type&gt;default&lt;/type&gt;&lt;/sys_ux_client_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1570757629</payload_hash>
+        <record_name>Open Action in FD</record_name>
+        <reverted_from/>
+        <source>dc4695de97403110974bbf1e6253af05</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-27 12:22:45</sys_created_on>
+        <sys_id>ec6b5ca997187110974bbf1e6253af10</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>189974d30070000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-27 12:22:45</sys_updated_on>
+        <type>UX Client Script</type>
+        <update_guid>646b5ca9aa187110b9cf35164bac3b10</update_guid>
+        <update_guid_history>646b5ca9aa187110b9cf35164bac3b10:1570757629,364a1c6931187110a57ef3aea3cb4b86:-217114569</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-27 13:15:52</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_client_script">sys_ux_client_script</sys_db_object>
+        <sys_id>5d423cc4ef474840b3aedd3b17ed9000</sys_id>
+        <sys_metadata>764ad82997187110974bbf1e6253af5c</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Open Action in FD</sys_name>
+        <sys_package display_value="Flow Finder" source="x_350851_flow_fi_0">18d672eb97132110974bbf1e6253afc8</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Flow Finder">18d672eb97132110974bbf1e6253afc8</sys_scope>
+        <sys_scope_delete display_value="">987de73dd51340699b520bfeba7fe469</sys_scope_delete>
+        <sys_update_name>sys_ux_client_script_764ad82997187110974bbf1e6253af5c</sys_update_name>
+        <sys_update_version display_value="sys_ux_client_script_764ad82997187110974bbf1e6253af5c">ec6b5ca997187110974bbf1e6253af10</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-27 13:15:52</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
