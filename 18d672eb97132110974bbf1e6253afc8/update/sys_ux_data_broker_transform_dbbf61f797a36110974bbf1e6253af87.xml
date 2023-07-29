@@ -88,6 +88,15 @@
     "fieldType": "string",&#13;
     "mandatory": false,&#13;
     "defaultValue": ""&#13;
+  },&#13;
+ {&#13;
+    "label": "Condition",&#13;
+    "name": "trigger_condition",&#13;
+    "description": "Encoded query of the trigger condition",&#13;
+    "readOnly": false,&#13;
+    "fieldType": "string",&#13;
+    "mandatory": false,&#13;
+    "defaultValue": ""&#13;
   }&#13;
 ]</props>
         <required_translations>[ {
@@ -100,7 +109,13 @@
   "message" : "Application",
   "comment" : ""
 }, {
+  "message" : "Condition",
+  "comment" : ""
+}, {
   "message" : "Decision Table",
+  "comment" : ""
+}, {
+  "message" : "Encoded query of the trigger condition",
   "comment" : ""
 }, {
   "message" : "Subflow",
@@ -150,11 +165,17 @@
 	var trigger_type = input.trigger_type;
 	var workflow = input.workflow;
 	var decision_table = input.decision_table;
+	var trigger_condition = input.trigger_condition;
+
+	var output = {
+		"query": "",
+		"table_name": ""
+	};
 
 	var flows = new GlideRecord("sys_hub_flow");
 	flows.orderBy("name");
-	if (!table && !application && !subflow && !action && !trigger_table && (active == "both") && !trigger_type && !workflow && !decision_table) {
-		return flows.getEncodedQuery();
+	if (!table && !application && !subflow && !action && !trigger_table && (active == "both") && !trigger_type && !workflow && !decision_table && !trigger_condition) {
+		output.query = flows.getEncodedQuery();
 	}
 
 	if (table) {
@@ -199,7 +220,8 @@
 	if (trigger_table) {
 		var tables = new GlideRecord("sys_db_object");
 		if (tables.get(trigger_table)) {
-			var tableTriggeredflowIDs = sn_flow.AssociatedFlows.getFlows(tables.getValue("name"));
+			output.table_name = tables.getValue("name");
+			var tableTriggeredflowIDs = sn_flow.AssociatedFlows.getFlows(output.table_name);
 			if (tableTriggeredflowIDs) {
 				flows.addQuery("sys_idIN" + tableTriggeredflowIDs);
 			}
@@ -239,20 +261,42 @@
 		flows.addQuery("sys_idIN" + flowsUsingDT);
 	}
 
-	return flows.getEncodedQuery();
+	if (trigger_condition) {
+		output.trigger_condition = trigger_condition;
+		var conditions = trigger_condition.split("^");
+		var variableValues = new GlideRecord("sys_variable_value");
+		var query = "document=sys_hub_trigger_instance^variable.label=condition^valueISNOTEMPTY";
+		for (var c in conditions) {
+			query += "^valueLIKE" + conditions[c].replace("OR", "");
+		}
+
+		variableValues.addQuery(query);
+		variableValues.query();
+		var flowsUsingSimilarQuery = [];
+		while (variableValues.next()) {
+			if (variableValues.document_key.flow) {
+				flowsUsingSimilarQuery.push(variableValues.document_key.flow.toString());
+			}
+		}
+
+		flows.addQuery("sys_idIN" + flowsUsingSimilarQuery);
+	}
+
+	output.query = flows.getEncodedQuery();
+	return output;
 }]]></script>
         <sys_class_name>sys_ux_data_broker_transform</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-06-27 12:05:32</sys_created_on>
         <sys_id>dbbf61f797a36110974bbf1e6253af87</sys_id>
-        <sys_mod_count>22</sys_mod_count>
+        <sys_mod_count>32</sys_mod_count>
         <sys_name>Flow Search Data Broker</sys_name>
         <sys_package display_value="Flow Finder" source="x_350851_flow_fi_0">18d672eb97132110974bbf1e6253afc8</sys_package>
         <sys_policy/>
         <sys_scope display_value="Flow Finder">18d672eb97132110974bbf1e6253afc8</sys_scope>
         <sys_update_name>sys_ux_data_broker_transform_dbbf61f797a36110974bbf1e6253af87</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-07-13 14:18:18</sys_updated_on>
+        <sys_updated_on>2023-07-29 14:26:44</sys_updated_on>
     </sys_ux_data_broker_transform>
     <sys_translated_text action="delete_multiple" query="documentkey=dbbf61f797a36110974bbf1e6253af87"/>
 </record_update>
