@@ -4,13 +4,13 @@
             <element>trigger_type</element>
             <position>0</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2023-07-24 08:00:43</sys_created_on>
-            <sys_id>b0a288e497503110974bbf1e6253af0f</sys_id>
+            <sys_created_on>2023-07-28 07:03:29</sys_created_on>
+            <sys_id>f5eb14fd97103110974bbf1e6253af27</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Trigger" display_value="Trigger" name="x_350851_flow_fi_0_flow_finder_form" sys_domain="global" view="aca248e497503110974bbf1e6253af93">eca248e497503110974bbf1e6253afbe</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2023-07-24 08:00:43</sys_updated_on>
+            <sys_updated_on>2023-07-28 07:03:29</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -18,13 +18,27 @@
             <element>trigger_table</element>
             <position>1</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2023-07-24 08:00:43</sys_created_on>
-            <sys_id>34a288e497503110974bbf1e6253af0f</sys_id>
+            <sys_created_on>2023-07-28 07:03:29</sys_created_on>
+            <sys_id>fdeb14fd97103110974bbf1e6253af27</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Trigger" display_value="Trigger" name="x_350851_flow_fi_0_flow_finder_form" sys_domain="global" view="aca248e497503110974bbf1e6253af93">eca248e497503110974bbf1e6253afbe</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2023-07-24 08:00:43</sys_updated_on>
+            <sys_updated_on>2023-07-28 07:03:29</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>trigger_condition</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-07-28 07:03:29</sys_created_on>
+            <sys_id>f1eb14fd97103110974bbf1e6253af28</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Trigger" display_value="Trigger" name="x_350851_flow_fi_0_flow_finder_form" sys_domain="global" view="aca248e497503110974bbf1e6253af93">eca248e497503110974bbf1e6253afbe</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-07-28 07:03:29</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

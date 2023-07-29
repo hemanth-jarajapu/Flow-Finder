@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_declarative_action_payload_definition">
     <sys_declarative_action_payload_definition action="INSERT_OR_UPDATE">
-        <action_key>OPEN_ACTION_FINDER_PAGE</action_key>
+        <action_key>OPEN_CONDITION_SEARCH_UI</action_key>
         <applicable_to>c3547169534723003eddddeeff7b126c</applicable_to>
         <description/>
-        <label>Open Finder Pages</label>
-        <payload_field_table>var__m_sys_declarative_action_payload_field_675fdcf097907110974bbf1e6253af5a</payload_field_table>
-        <payload_template>{}</payload_template>
+        <label>Open Condition Search UI</label>
+        <payload_field_table>var__m_sys_declarative_action_payload_field_1bc9598a97d07110974bbf1e6253afb8</payload_field_table>
+        <payload_template/>
         <sys_class_name>sys_declarative_action_payload_definition</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-07-25 04:45:14</sys_created_on>
-        <sys_id>675fdcf097907110974bbf1e6253af5a</sys_id>
-        <sys_mod_count>11</sys_mod_count>
-        <sys_name>Open Finder Pages</sys_name>
+        <sys_created_on>2023-07-29 06:12:48</sys_created_on>
+        <sys_id>1bc9598a97d07110974bbf1e6253afb8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Open Condition Search UI</sys_name>
         <sys_package display_value="Flow Finder" source="x_350851_flow_fi_0">18d672eb97132110974bbf1e6253afc8</sys_package>
         <sys_policy/>
         <sys_scope display_value="Flow Finder">18d672eb97132110974bbf1e6253afc8</sys_scope>
-        <sys_update_name>sys_declarative_action_payload_definition_675fdcf097907110974bbf1e6253af5a</sys_update_name>
+        <sys_update_name>sys_declarative_action_payload_definition_1bc9598a97d07110974bbf1e6253afb8</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-07-29 05:59:47</sys_updated_on>
+        <sys_updated_on>2023-07-29 06:12:48</sys_updated_on>
     </sys_declarative_action_payload_definition>
 </record_update>

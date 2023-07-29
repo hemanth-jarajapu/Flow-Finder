@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_data_broker_transform">
     <sys_ux_data_broker_transform action="INSERT_OR_UPDATE">
         <acl_failure_result/>
-        <api_name>x_350851_flow_fi_0.Fetch Flow Details 2.0</api_name>
+        <api_name>x_350851_flow_fi_0.Action Search Data Broker</api_name>
         <description/>
         <mutates_server_data>false</mutates_server_data>
-        <name>Fetch Flow Details 2.0</name>
+        <name>Action Search Data Broker</name>
         <output_schema/>
         <private>false</private>
         <props>[&#13;
   {&#13;
-    "label": "Flow ID",&#13;
-    "name": "flow_id",&#13;
-    "description": "Sys ID of the flow",&#13;
+    "label": "Action ID",&#13;
+    "name": "actoin_id",&#13;
+    "description": "Sys ID of the action",&#13;
     "readOnly": false,&#13;
     "fieldType": "string",&#13;
     "mandatory": true,&#13;
@@ -19,221 +19,28 @@
   }&#13;
  ]</props>
         <required_translations>[ {
-  "message" : "Flow ID",
+  "message" : "Action ID",
   "comment" : ""
 }, {
-  "message" : "Sys ID of the flow",
+  "message" : "Sys ID of the action",
   "comment" : ""
 } ]</required_translations>
         <schema_version>1.0.0</schema_version>
         <script><![CDATA[function transform(input) {
-	var flowGR = new GlideRecord("sys_hub_flow");
-	if (!flowGR.get(input.flow_id)) {
-		return false;
-	}
-
-	var flowDetails = {
-		"Name": flowGR.getDisplayValue(),
-		"link": "sys_hub_flow.do?sys_id=" + input.flow_id,
-		"hideTrigger": true,
-		"hideUsage": true,
-		"trigger": [],
-		"using": [],
-		"dependancies": {
-			"actions": [],
-			"subflows": [],
-			"decision_tables": [],
-			"workflows": [],
-		}
-	};
-
-	// Fill Trigger Data
-	var triggerInstance = new GlideRecord("sys_hub_trigger_instance");
-	if (triggerInstance.get("flow", input.flow_id)) {
-		flowDetails.hideTrigger = false;
-		var triggerType = triggerInstance.trigger_definition.name.toString();
-		flowDetails.trigger.push(triggerInstance.trigger_definition.category.getDisplayValue() + " - " + triggerType);
-
-		switch (triggerType) {
-			case ("Created"):
-			case ("Created or Updated"):
-			case ("Updated"): {
-				flowDetails.trigger.push("Table: " + triggerInstance.trigger_inputs.table);
-				if (triggerInstance.trigger_inputs.trigger_strategy) {
-					flowDetails.trigger.push("Run: " + triggerInstance.trigger_inputs.trigger_strategy.getDisplayValue());
-				}
-				flowDetails.trigger.push(triggerInstance.trigger_inputs.run_when_setting.getDisplayValue());
-				flowDetails.trigger.push(triggerInstance.trigger_inputs.run_when_user_setting.getDisplayValue());
-				flowDetails.trigger.push(triggerInstance.trigger_inputs.run_on_extended.getDisplayValue());
-				flowDetails.trigger.push("Where(foreground/background): " + triggerInstance.trigger_inputs.run_flow_in.getDisplayValue());
-				break;
-			}
-			case ("Inbound Email"): {
-				flowDetails.trigger.push("Target Table: " + triggerInstance.trigger_inputs.target_table);
-				flowDetails.trigger.push("Email Conditions: " + triggerInstance.trigger_inputs.email_conditions);
-				break;
-			}
-			case ("Daily"): {
-				flowDetails.trigger.push("Time: " + triggerInstance.trigger_inputs.time.getDisplayValue());
-				break;
-			}
-			case ("Weekly"): {
-				flowDetails.trigger.push("Day of Week: " + triggerInstance.trigger_inputs.day_of_week.getDisplayValue());
-				flowDetails.trigger.push("Time: " + triggerInstance.trigger_inputs.time.getDisplayValue());
-				break;
-			}
-			case ("Monthly"): {
-				flowDetails.trigger.push("Day of Month: " + triggerInstance.trigger_inputs.day_of_month);
-				flowDetails.trigger.push("Time: " + triggerInstance.trigger_inputs.time.getDisplayValue());
-				break;
-			}
-			case ("Run Once"): {
-				flowDetails.trigger.push("Run on: " + triggerInstance.trigger_inputs.run_in.getDisplayValue());
-				break;
-			}
-			case ("Repeat"): {
-				flowDetails.trigger.push("Repeat every: " + triggerInstance.trigger_inputs.repeat.getDisplayValue());
-				break;
-			}
-			case ("REST API - Asynchronous"): {
-				flowDetails.trigger.push("HTTP Method: " + triggerInstance.trigger_inputs.http_method.getDisplayValue());
-				flowDetails.trigger.push("Path: " + triggerInstance.trigger_inputs.base_path + triggerInstance.trigger_inputs.path);
-				flowDetails.trigger.push("Media Type: " + triggerInstance.trigger_inputs.media_type);
-				flowDetails.trigger.push("Requires Authentication: " + triggerInstance.trigger_inputs.requires_authentication);
-				flowDetails.trigger.push("Allow External Access: " + triggerInstance.trigger_inputs.allow_external_access);
-				if (triggerInstance.trigger_inputs.roles) {
-					flowDetails.trigger.push("Roles Required: " + triggerInstance.trigger_inputs.roles.getDisplayValue());
-				}
-				break;
-			}
-		}
-	}
-
-	// Fill Usage Data
-	// Action Data
-	var actionInstances = new GlideRecord("sys_hub_action_instance");
-	actionInstances.addQuery("flow=" + input.flow_id + "^action_typeISNOTEMPTY");
-	actionInstances.query();
-	if (actionInstances.hasNext()) {
-		flowDetails.hideUsage = false;
-	}
-	var actiondata = {
-		"name": "",
-		"link": "",
-		"inputs": ""
-	};
-	var usedActioninstances = [];
-	var actionType = "";
-	while (actionInstances.next()) {
-		actionType = actionInstances.getValue("action_type");
-		if (usedActioninstances.indexOf(actionType) > -1) {
-			continue;
-		}
-		actiondata.name = actionInstances.action_type.getDisplayValue();
-		actiondata.link = "sys_hub_action_type_base.do?sys_id=" + actionInstances.action_type.parent_action;
-		actiondata.inputs = "";
-		if (actionInstances.action_inputs) {
-			for (var a in actionInstances.action_inputs) {
-				if (["sys_id", "sys_meta"].indexOf(a) > -1) {
-					continue;
-				}
-
-				if (actionInstances.action_inputs[a]) {
-					actiondata.inputs += a.replaceAll("_", " ").replace(a[0], a[0].toUpperCase()) + ": " + actionInstances.action_inputs[a].getDisplayValue();
-				}
-			}
-		}
-
-		flowDetails.dependancies.actions.push(actiondata);
-		usedActioninstances.push(actionType);
-	}
-
-	// Subflow Data
-	var subflowInstances = new GlideRecord("sys_hub_sub_flow_instance");
-	subflowInstances.addQuery("flowISNOTEMPTY^flow=" + input.flow_id);
-	subflowInstances.query();
-	if (subflowInstances.hasNext()) {
-		flowDetails.hideUsage = false;
-	}
-	var subflowData = {
-		"title": "Subflows",
-		"data": []
-	};
-	var usedSubflowInstances = [];
-	var subflowId = "";
-	while (subflowInstances.next()) {
-		subflowId = subflowInstances.getValue("subflow");
-		if (usedSubflowInstances.indexOf(subflowId) > -1) {
-			continue;
-		}
-		subflowData.data.push({
-			"name": subflowInstances.subflow.getDisplayValue(),
-			"link": "sys_hub_flow_base.do?sys_id=" + subflowInstances.getValue("subflow"),
-			"sys_id": subflowInstances.getValue("subflow")
-		});
-		usedSubflowInstances.push(subflowId);
-	}
-	if (subflowData.data.length > 0) {
-		flowDetails.using.push(subflowData);
-	}
-
-	// Workflow and Decision Table Data
-	var flowLogicInstances = new GlideRecord("sys_hub_flow_logic");
-	flowLogicInstances.addQuery("flow=" + input.flow_id + "^workflow_referenceISNOTEMPTY^ORdecision_tableISNOTEMPTY");
-	flowLogicInstances.query();
-	if (flowLogicInstances.hasNext()) {
-		flowDetails.hideUsage = false;
-	}
-	var workflowData = {
-		"title": "Workflows",
-		"data": []
-	};
-	var dtData = {
-		"title": "Decision Tables",
-		"data": []
-	};
-	var usedFlowLogicInstances = [];
-	var wrfdtId = "";
-	while (flowLogicInstances.next()) {
-		wrfdtId = flowLogicInstances.workflow_reference ? flowLogicInstances.getValue("workflow_reference") : flowLogicInstances.getValue("decision_table");
-		if (usedFlowLogicInstances.indexOf(wrfdtId) > -1) {
-			continue;
-		}
-		if (flowLogicInstances.workflow_reference) {
-			workflowData.data.push({
-				"name": flowLogicInstances.workflow_reference.getDisplayValue(),
-				"link": "wf_workflow.do?sys_id=" + flowLogicInstances.getValue("workflow_reference")
-			});
-		}
-		if (flowLogicInstances.decision_table) {
-			dtData.data.push({
-				"name": flowLogicInstances.decision_table.getDisplayValue(),
-				"link": "sys_decision.do?sys_id=" + flowLogicInstances.getValue("decision_table")
-			});
-		}
-		usedFlowLogicInstances.push(wrfdtId);
-	}
-	if (workflowData.data.length > 0) {
-		flowDetails.using.push(workflowData);
-	}
-	if (dtData.data.length > 0) {
-		flowDetails.using.push(dtData);
-	}
-
-	return flowDetails;
+	
 }]]></script>
         <sys_class_name>sys_ux_data_broker_transform</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-07-24 14:09:00</sys_created_on>
         <sys_id>2be6d16897943110974bbf1e6253af56</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_name>Fetch Flow Details 2.0</sys_name>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Action Search Data Broker</sys_name>
         <sys_package display_value="Flow Finder" source="x_350851_flow_fi_0">18d672eb97132110974bbf1e6253afc8</sys_package>
         <sys_policy/>
         <sys_scope display_value="Flow Finder">18d672eb97132110974bbf1e6253afc8</sys_scope>
         <sys_update_name>sys_ux_data_broker_transform_2be6d16897943110974bbf1e6253af56</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-07-24 14:22:13</sys_updated_on>
+        <sys_updated_on>2023-07-28 06:12:21</sys_updated_on>
     </sys_ux_data_broker_transform>
     <sys_translated_text action="delete_multiple" query="documentkey=2be6d16897943110974bbf1e6253af56"/>
 </record_update>
