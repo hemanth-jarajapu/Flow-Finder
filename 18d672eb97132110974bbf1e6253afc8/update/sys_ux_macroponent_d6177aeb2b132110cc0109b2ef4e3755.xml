@@ -529,18 +529,22 @@
           "clientScript" : null,
           "conditional" : null,
           "declarativeAction" : null,
-          "event" : null,
-          "operation" : {
-            "dataBrokerId" : "ba7ac9a297007110974bbf1e6253af65",
-            "operationName" : "REFRESH",
-            "parentResourceId" : "fetch_flow_details",
+          "event" : {
+            "apiName" : "sn_uxf_page.NOW_UXF_PAGE#SET_LOADING_STATE",
             "payload" : {
               "type" : "JSON_LITERAL",
-              "value" : { }
-            }
+              "value" : {
+                "loading" : true,
+                "label" : null,
+                "action" : null,
+                "nonBlocking" : false
+              }
+            },
+            "sysId" : "0404f68486f1baab1dc7ef2a27a3de50"
           },
-          "targetId" : "clkiiffxfdduaaccdzccahhnmhwtzzjjc",
-          "type" : "DATABROKER_OP"
+          "operation" : null,
+          "targetId" : "clkqsfeeaahhaaccccaaccahhnosdddxuuv",
+          "type" : "EVENT"
         } ]
       } ],
       "slot" : "right",
@@ -597,7 +601,39 @@
       "value" : false
     }
   },
-  "eventMappings" : [ ],
+  "eventMappings" : [ {
+    "eventMappingId" : "clkqsiigggmaacccceccahhnfoejjucchhy",
+    "isConfiguration" : false,
+    "offRowStorageId" : null,
+    "sourceEventApiName" : "sn_uxf_page.CANVAS_MODAL#CLOSED",
+    "sourceEventCorrelationId" : null,
+    "sourceEventDefinition" : {
+      "apiName" : "sn_uxf_page.CANVAS_MODAL#CLOSED",
+      "id" : null,
+      "type" : "UXEVENT"
+    },
+    "sourceEventSysId" : null,
+    "targets" : [ {
+      "broker" : null,
+      "clientScript" : null,
+      "conditional" : null,
+      "declarativeAction" : null,
+      "event" : {
+        "apiName" : "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+        "payload" : {
+          "type" : "JSON_LITERAL",
+          "value" : {
+            "propName" : "selected_flow_id",
+            "value" : ""
+          }
+        },
+        "sysId" : "32408b42ff7a10109046e490703bf176"
+      },
+      "operation" : null,
+      "targetId" : "clkqsiigggmaaccccfccahhnggddhjiiggmdd",
+      "type" : "EVENT"
+    } ]
+  } ],
   "slot" : null,
   "definition" : {
     "id" : "9c2e3b0978b3250ef3081204f151026a",
@@ -1395,8 +1431,8 @@
   },
   "overrides" : {
     "composition" : [ {
-      "elementId" : "header_1",
-      "elementLabel" : "Header 1",
+      "elementId" : "condition_search_header",
+      "elementLabel" : "Condition Search Header",
       "propertyValues" : {
         "ariaRegionHeadingLevel" : {
           "type" : "JSON_LITERAL",
@@ -1440,7 +1476,7 @@
           "propertyValues" : {
             "css" : {
               "type" : "JSON_LITERAL",
-              "value" : "* { }"
+              "value" : "* { \r\n    font-weight: var(--now-modal_heading--font-weight,var(--now-display-type--primary--font-weight,600));\r\n    font-size: 20px;\r\n    font-family: var(--now-modal_heading--font-family);\r\n}"
             },
             "text" : {
               "type" : "TRANSLATION_LITERAL",
@@ -1452,7 +1488,7 @@
             },
             "tag" : {
               "type" : "JSON_LITERAL",
-              "value" : "h2"
+              "value" : "p"
             }
           },
           "eventMappings" : [ ],
@@ -1496,8 +1532,8 @@
       "items" : [ ],
       "styles" : null
     }, {
-      "elementId" : "body_1",
-      "elementLabel" : "Body 1",
+      "elementId" : "condition_search_body",
+      "elementLabel" : "Condition Search Body",
       "propertyValues" : {
         "ariaRegionHeadingLevel" : {
           "type" : "JSON_LITERAL",
@@ -1541,7 +1577,7 @@
           "propertyValues" : {
             "hideEditorDescription" : {
               "type" : "JSON_LITERAL",
-              "value" : false
+              "value" : true
             },
             "hideSortByDescription" : {
               "type" : "JSON_LITERAL",
@@ -1758,10 +1794,10 @@
           "default" : {
             "children" : null,
             "isInline" : null,
-            "items" : [{"element_id":"trigger_table_name","styles":{"background":"rgb(var(--now-color_surface--brand-1))","width":"fit-content","height":"fit-content","padding":"0px","border-color":"rgb(var(--now-color_surface--brand-1))","border-width":"var(--now-static-space--xxs)","border-style":"id","border-radius":"var(--now-static-border-radius--lg)","padding-right":"var(--now-static-space--lg)","padding-left":"var(--now-static-space--md)","padding-top":"0px","padding-bottom":"0px"}},{"element_id":"condition_builder","styles":{}},{"element_id":"no_table_message","styles":{}}],
+            "items" : [{"element_id":"trigger_table_name","styles":{"width":"fit-content","height":"fit-content","padding":"0px","padding-left":"var(--now-static-space--xs)"}},{"element_id":"condition_builder","styles":{}},{"element_id":"no_table_message","styles":{}}],
             "root" : null,
             "rules" : null,
-            "styles" : {"flex-direction":"column"},
+            "styles" : {"flex-direction":"column","gap":"var(--now-static-space--sm)"},
             "templateId" : "5832fd4d53c31010e6bcddeeff7b12db",
             "type" : "flex"
           },
@@ -1778,8 +1814,8 @@
       "items" : [ ],
       "styles" : null
     }, {
-      "elementId" : "footer_1",
-      "elementLabel" : "Footer 1",
+      "elementId" : "condition_search_footer",
+      "elementLabel" : "Condition Search Footer",
       "propertyValues" : {
         "ariaRegionHeadingLevel" : {
           "type" : "JSON_LITERAL",
@@ -1823,11 +1859,11 @@
           "propertyValues" : {
             "size" : {
               "type" : "JSON_LITERAL",
-              "value" : "lg"
+              "value" : "md"
             },
             "variant" : {
               "type" : "JSON_LITERAL",
-              "value" : "secondary-positive"
+              "value" : "primary"
             },
             "icon" : {
               "type" : "JSON_LITERAL",
@@ -1970,15 +2006,52 @@
           "isNonDestructive" : false,
           "items" : [ ],
           "styles" : null
+        }, {
+          "elementId" : "stylized_text_6",
+          "elementLabel" : "Stylized text 6",
+          "propertyValues" : {
+            "css" : {
+              "type" : "JSON_LITERAL",
+              "value" : "* { \r\n    font-size: 8px;\r\n    color: gray;\r\n}"
+            },
+            "text" : {
+              "type" : "TRANSLATION_LITERAL",
+              "value" : {
+                "code" : null,
+                "message" : "* Results include flows using similar statements in their trigger conditions, not just those using the exact condition provided.",
+                "comment" : ""
+              }
+            },
+            "tag" : {
+              "type" : "JSON_LITERAL",
+              "value" : "p"
+            }
+          },
+          "eventMappings" : [ ],
+          "slot" : "",
+          "definition" : {
+            "id" : "4335ba6dca80378f7ba7a67cd6667bec",
+            "type" : "MACROPONENT"
+          },
+          "overrides" : null,
+          "isHidden" : {
+            "type" : "JSON_LITERAL",
+            "value" : false
+          },
+          "isHero" : false,
+          "extensionPoints" : [ ],
+          "isNonDestructive" : false,
+          "items" : [ ],
+          "styles" : null
         } ],
         "layout" : {
           "default" : {
             "children" : null,
             "isInline" : null,
-            "items" : [{"element_id":"button_2","styles":{"margin":"var(--now-static-space--xxs)","margin-right":"var(--now-static-space--lg)"}}],
+            "items" : [{"element_id":"stylized_text_6","styles":{"margin":"0px","margin-top":"var(--now-static-space--xl)","margin-right":"0px","margin-bottom":"-10px","margin-left":"-5px"}},{"element_id":"button_2","styles":{"margin":"var(--now-static-space--xxs)","margin-right":"var(--now-static-space--sm)"}}],
             "root" : null,
             "rules" : null,
-            "styles" : {"flex-direction":"row","justify-content":"flex-end"},
+            "styles" : {"flex-direction":"row","justify-content":"space-between","margin":"0px","margin-bottom":"-5px"},
             "templateId" : "5832fd4d53c31010e6bcddeeff7b12db",
             "type" : "flex"
           },
@@ -1986,18 +2059,13 @@
         }
       },
       "isHidden" : {
-        "type" : "CLIENT_TRANSFORM",
-        "transform" : {
-          "operands" : {
-            "type" : "LIST_CONTAINER",
-            "container" : [ {
-              "type" : "STATE_BINDING",
-              "binding" : {
-                "address" : [ "trigger_table" ]
-              }
-            } ]
-          },
-          "operator" : "EMPTY"
+        "type" : "CLIENT_TRANSFORM_SCRIPT",
+        "script" : {
+          "apiVersion" : "2.0.0",
+          "controllerElementId" : null,
+          "inlineScript" : null,
+          "scriptSysId" : "37eeaa5e97d4b110974bbf1e6253afd5",
+          "target" : null
         }
       },
       "isHero" : false,
@@ -2010,7 +2078,7 @@
       "default" : {
         "children" : null,
         "isInline" : null,
-        "items" : [{"element_id":"header_1","rules":null,"styles":{"width":"100%","display":"flex","flex-direction":"column"}},{"element_id":"body_1","rules":null,"styles":{"width":"100%","display":"flex","flex-direction":"column","flex-grow":1.5}},{"element_id":"footer_1","rules":null,"styles":{"width":"100%","display":"flex","flex-direction":"column"}}],
+        "items" : [{"element_id":"condition_search_header","rules":null,"styles":{"width":"100%","display":"flex","flex-direction":"column"}},{"element_id":"condition_search_body","rules":null,"styles":{"width":"100%","display":"flex","flex-direction":"column","flex-grow":1.5}},{"element_id":"condition_search_footer","rules":null,"styles":{"width":"100%","display":"flex","flex-direction":"column"}}],
         "root" : null,
         "rules" : null,
         "styles" : {"flex-direction":"column","gap":"0px","padding":"var(--now-static-space--md)"},
@@ -2145,40 +2213,6 @@
       },
       "operation" : null,
       "targetId" : "clkiiggjjggohaacchjccahhnfjjtiijjffxii",
-      "type" : "EVENT"
-    } ]
-  }, {
-    "eventMappingId" : "clkiiggiirpnaacchaccahhnffaxybhudd",
-    "isConfiguration" : false,
-    "offRowStorageId" : null,
-    "sourceEventApiName" : "sn_uxf.DATA_FETCH_INITIATED",
-    "sourceEventCorrelationId" : null,
-    "sourceEventDefinition" : {
-      "apiName" : "sn_uxf.DATA_FETCH_INITIATED",
-      "id" : null,
-      "type" : "UXEVENT"
-    },
-    "sourceEventSysId" : null,
-    "targets" : [ {
-      "broker" : null,
-      "clientScript" : null,
-      "conditional" : null,
-      "declarativeAction" : null,
-      "event" : {
-        "apiName" : "sn_uxf_page.NOW_UXF_PAGE#SET_LOADING_STATE",
-        "payload" : {
-          "type" : "JSON_LITERAL",
-          "value" : {
-            "loading" : true,
-            "label" : null,
-            "action" : null,
-            "nonBlocking" : false
-          }
-        },
-        "sysId" : "0404f68486f1baab1dc7ef2a27a3de50"
-      },
-      "operation" : null,
-      "targetId" : "clkiiggiirpnaacchbccahhnxiieelcchhraa",
       "type" : "EVENT"
     } ]
   }, {
@@ -2427,6 +2461,9 @@
   "disabled" : false
 } ]</props>
         <required_translations>[ {
+  "message" : "* Results include flows using similar statements in their trigger conditions, not just those using the exact condition provided.",
+  "comment" : ""
+}, {
   "message" : "Accessible Label",
   "comment" : ""
 }, {
@@ -2586,14 +2623,14 @@
         <sys_created_by>system</sys_created_by>
         <sys_created_on>2023-06-14 11:48:10</sys_created_on>
         <sys_id>d6177aeb2b132110cc0109b2ef4e3755</sys_id>
-        <sys_mod_count>297</sys_mod_count>
+        <sys_mod_count>337</sys_mod_count>
         <sys_name>Home</sys_name>
         <sys_package display_value="Flow Finder" source="x_350851_flow_fi_0">18d672eb97132110974bbf1e6253afc8</sys_package>
         <sys_policy/>
         <sys_scope display_value="Flow Finder">18d672eb97132110974bbf1e6253afc8</sys_scope>
         <sys_update_name>sys_ux_macroponent_d6177aeb2b132110cc0109b2ef4e3755</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-07-29 14:31:27</sys_updated_on>
+        <sys_updated_on>2023-07-31 11:29:19</sys_updated_on>
     </sys_ux_macroponent>
     <sys_translated_text action="delete_multiple" query="documentkey=d6177aeb2b132110cc0109b2ef4e3755"/>
 </record_update>
