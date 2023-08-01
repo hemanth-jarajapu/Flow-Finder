@@ -186,7 +186,7 @@
 	}
 	if (subflow) {
 		var subflowInstances = new GlideRecord("sys_hub_sub_flow_instance");
-		subflowInstances.addQuery("flowISNOTEMPTY^subflow=" + subflow);
+		subflowInstances.addQuery("flowISNOTEMPTY^flow.sys_class_name=sys_hub_flow^subflow=" + subflow + "^ORsubflow.ref_sys_hub_flow_snapshot.parent_flow=" + subflow);
 		subflowInstances.query();
 		var flowsUsingSubflow = [];
 		while (subflowInstances.next()) {
@@ -197,7 +197,7 @@
 	}
 	if (action) {
 		var actionInstances = new GlideRecord("sys_hub_action_instance");
-		actionInstances.addQuery("flowISNOTEMPTY^action_type=" + action);
+		actionInstances.addQuery("flowISNOTEMPTY^flow.sys_class_name=sys_hub_flow^action_type=" + action + "^ORaction_type.ref_sys_hub_action_type_snapshot.parent_action=" + action);
 		actionInstances.query();
 		var flowsUsingAction = [];
 		while (actionInstances.next()) {
@@ -241,7 +241,7 @@
 
 	var flowLogicInstances = new GlideRecord("sys_hub_flow_logic");
 	if (workflow) {
-		flowLogicInstances.addQuery("workflow_reference=" + workflow);
+		flowLogicInstances.addQuery("flow.sys_class_name=sys_hub_flow^workflow_reference=" + workflow);
 		flowLogicInstances.query();
 		var flowsUsingWorkflow = [];
 		while (flowLogicInstances.next()) {
@@ -251,7 +251,7 @@
 		flows.addQuery("sys_idIN" + flowsUsingWorkflow);
 	}
 	if (decision_table) {
-		flowLogicInstances.addQuery("decision_table=" + decision_table);
+		flowLogicInstances.addQuery("flow.sys_class_name=sys_hub_flow^decision_table=" + decision_table);
 		flowLogicInstances.query();
 		var flowsUsingDT = [];
 		while (flowLogicInstances.next()) {
@@ -274,7 +274,7 @@
 		variableValues.query();
 		var flowsUsingSimilarQuery = [];
 		while (variableValues.next()) {
-			if (variableValues.document_key.flow) {
+			if (variableValues.document_key.flow && (variableValues.document_key.flow.sys_class_name == "sys_hub_flow")) {
 				flowsUsingSimilarQuery.push(variableValues.document_key.flow.toString());
 			}
 		}
@@ -289,14 +289,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-06-27 12:05:32</sys_created_on>
         <sys_id>dbbf61f797a36110974bbf1e6253af87</sys_id>
-        <sys_mod_count>32</sys_mod_count>
+        <sys_mod_count>38</sys_mod_count>
         <sys_name>Flow Search Data Broker</sys_name>
         <sys_package display_value="Flow Finder" source="x_350851_flow_fi_0">18d672eb97132110974bbf1e6253afc8</sys_package>
         <sys_policy/>
         <sys_scope display_value="Flow Finder">18d672eb97132110974bbf1e6253afc8</sys_scope>
         <sys_update_name>sys_ux_data_broker_transform_dbbf61f797a36110974bbf1e6253af87</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-07-29 14:26:44</sys_updated_on>
+        <sys_updated_on>2023-07-31 11:21:40</sys_updated_on>
     </sys_ux_data_broker_transform>
     <sys_translated_text action="delete_multiple" query="documentkey=dbbf61f797a36110974bbf1e6253af87"/>
 </record_update>

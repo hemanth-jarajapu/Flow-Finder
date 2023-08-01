@@ -117,7 +117,47 @@
           "value" : true
         }
       },
-      "eventMappings" : [ ],
+      "eventMappings" : [ {
+        "eventMappingId" : "clkqzfmaddaaccccwccabgkiihbktffcc",
+        "isConfiguration" : false,
+        "offRowStorageId" : null,
+        "sourceEventApiName" : "sn_now_record_form.NOW_RECORD_FORM_SECTION_COLUMN_LAYOUT#SET_VALUE",
+        "sourceEventCorrelationId" : null,
+        "sourceEventDefinition" : {
+          "apiName" : "sn_now_record_form.NOW_RECORD_FORM_SECTION_COLUMN_LAYOUT#SET_VALUE",
+          "id" : null,
+          "type" : "UXEVENT"
+        },
+        "sourceEventSysId" : null,
+        "targets" : [ {
+          "broker" : null,
+          "clientScript" : null,
+          "conditional" : null,
+          "declarativeAction" : null,
+          "event" : {
+            "apiName" : "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+            "payload" : {
+              "type" : "MAP_CONTAINER",
+              "container" : {
+                "propName" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : "connection_credential_alias"
+                },
+                "value" : {
+                  "type" : "EVENT_PAYLOAD_BINDING",
+                  "binding" : {
+                    "address" : [ "value" ]
+                  }
+                }
+              }
+            },
+            "sysId" : "32408b42ff7a10109046e490703bf176"
+          },
+          "operation" : null,
+          "targetId" : "clkqzfmaeeaaccccxccabgaaiiideeftbb",
+          "type" : "EVENT"
+        } ]
+      } ],
       "slot" : "left",
       "definition" : {
         "id" : "cdf8d604a3fda59e69ccd6dd407263d6",
@@ -218,8 +258,10 @@
           "value" : false
         },
         "query" : {
-          "type" : "JSON_LITERAL",
-          "value" : ""
+          "type" : "DATA_OUTPUT_BINDING",
+          "binding" : {
+            "address" : [ "action_search_data_broker", "output", "query" ]
+          }
         },
         "hideFilterPanel" : {
           "type" : "JSON_LITERAL",
@@ -603,6 +645,29 @@
         <data>[ {
   "cachePolicy" : null,
   "definition" : {
+    "id" : "2be6d16897943110974bbf1e6253af56",
+    "type" : "TRANSFORM"
+  },
+  "dependencies" : { },
+  "elementId" : "action_search_data_broker",
+  "elementLabel" : "Action Search Data Broker",
+  "eventMappings" : [ ],
+  "inputValues" : {
+    "connection_cred_id" : {
+      "type" : "STATE_BINDING",
+      "binding" : {
+        "address" : [ "connection_credential_alias" ]
+      }
+    },
+    "script_snippet" : {
+      "type" : "JSON_LITERAL",
+      "value" : ""
+    }
+  },
+  "readEvaluationMode" : "EAGER"
+}, {
+  "cachePolicy" : null,
+  "definition" : {
     "id" : "029f04e053610110ac9bddeeff7b1294",
     "type" : "CONTROLLER"
   },
@@ -908,19 +973,30 @@
         <root_component_config>{ }</root_component_config>
         <root_component_definition/>
         <schema_version>1.0.0</schema_version>
-        <state_properties>[ ]</state_properties>
+        <state_properties>[ {
+  "name" : "connection_credential_alias",
+  "label" : "connection_credential_alias",
+  "fieldType" : "",
+  "valueType" : "",
+  "shape" : "",
+  "description" : "",
+  "initialValue" : {
+    "type" : "JSON_LITERAL",
+    "value" : null
+  }
+} ]</state_properties>
         <sys_class_name>sys_ux_macroponent</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-07-26 12:30:39</sys_created_on>
         <sys_id>ea93138597543110974bbf1e6253af19</sys_id>
-        <sys_mod_count>28</sys_mod_count>
+        <sys_mod_count>33</sys_mod_count>
         <sys_name>Default</sys_name>
         <sys_package display_value="Flow Finder" source="x_350851_flow_fi_0">18d672eb97132110974bbf1e6253afc8</sys_package>
         <sys_policy/>
         <sys_scope display_value="Flow Finder">18d672eb97132110974bbf1e6253afc8</sys_scope>
         <sys_update_name>sys_ux_macroponent_ea93138597543110974bbf1e6253af19</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-07-27 13:23:32</sys_updated_on>
+        <sys_updated_on>2023-07-31 15:31:06</sys_updated_on>
     </sys_ux_macroponent>
     <sys_translated_text action="delete_multiple" query="documentkey=ea93138597543110974bbf1e6253af19"/>
 </record_update>
