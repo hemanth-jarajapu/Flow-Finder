@@ -1,30 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
     <sys_ui_section caption="Using" section_id="42a11fc197543110974bbf1e6253afc1" sys_domain="global" table="x_350851_flow_fi_0_flow_finder_form" version="3" view="Action_Finder">
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>used_table</element>
+            <element>step_type</element>
             <position>0</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2023-07-28 10:30:13</sys_created_on>
-            <sys_id>c23bcdbd97d03110974bbf1e6253af89</sys_id>
+            <sys_created_on>2023-08-01 14:20:52</sys_created_on>
+            <sys_id>6756264b97543110974bbf1e6253af56</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Using" display_value="Using" name="x_350851_flow_fi_0_flow_finder_form" sys_domain="global" view="c2a11fc197543110974bbf1e6253afba">42a11fc197543110974bbf1e6253afc1</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2023-07-28 10:30:13</sys_updated_on>
+            <sys_updated_on>2023-08-01 14:20:52</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>used_table</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-08-01 14:20:52</sys_created_on>
+            <sys_id>6b56264b97543110974bbf1e6253af56</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Using" display_value="Using" name="x_350851_flow_fi_0_flow_finder_form" sys_domain="global" view="c2a11fc197543110974bbf1e6253afba">42a11fc197543110974bbf1e6253afc1</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-08-01 14:20:52</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>connection_credential_alias</element>
-            <position>1</position>
+            <position>2</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2023-07-28 10:30:13</sys_created_on>
-            <sys_id>c63bcdbd97d03110974bbf1e6253af89</sys_id>
+            <sys_created_on>2023-08-01 14:20:53</sys_created_on>
+            <sys_id>6f56264b97543110974bbf1e6253af56</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Using" display_value="Using" name="x_350851_flow_fi_0_flow_finder_form" sys_domain="global" view="c2a11fc197543110974bbf1e6253afba">42a11fc197543110974bbf1e6253afc1</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2023-07-28 10:30:13</sys_updated_on>
+            <sys_updated_on>2023-08-01 14:20:53</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>script_snippet</element>
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-08-01 14:20:53</sys_created_on>
+            <sys_id>6356264b97543110974bbf1e6253af57</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Using" display_value="Using" name="x_350851_flow_fi_0_flow_finder_form" sys_domain="global" view="c2a11fc197543110974bbf1e6253afba">42a11fc197543110974bbf1e6253afc1</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-08-01 14:20:53</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
