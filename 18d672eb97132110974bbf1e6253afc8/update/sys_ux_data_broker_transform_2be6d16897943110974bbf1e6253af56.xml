@@ -8,6 +8,24 @@
         <output_schema/>
         <private>false</private>
         <props>[&#13;
+{&#13;
+    "label": "Application",&#13;
+    "name": "application",&#13;
+    "description": "Sys ID of the application",&#13;
+    "readOnly": false,&#13;
+    "fieldType": "string",&#13;
+    "mandatory": false,&#13;
+    "defaultValue": ""&#13;
+  },&#13;
+{&#13;
+    "label": "Step Type",&#13;
+    "name": "step_type",&#13;
+    "description": "Sys ID of the step used by the actions",&#13;
+    "readOnly": false,&#13;
+    "fieldType": "string",&#13;
+    "mandatory": true,&#13;
+    "defaultValue": ""&#13;
+  },&#13;
   {&#13;
     "label": "Connection/Credential Alias",&#13;
     "name": "connection_cred_id",&#13;
@@ -25,10 +43,22 @@
     "fieldType": "string",&#13;
     "mandatory": true,&#13;
     "defaultValue": ""&#13;
+  },&#13;
+{&#13;
+    "label": "Table",&#13;
+    "name": "used_table",&#13;
+    "description": "Sys ID of the table used by the actions",&#13;
+    "readOnly": false,&#13;
+    "fieldType": "string",&#13;
+    "mandatory": true,&#13;
+    "defaultValue": ""&#13;
   }&#13;
  ]</props>
         <required_translations>[ {
   "message" : "A code snippet that might be part of a script step within the action",
+  "comment" : ""
+}, {
+  "message" : "Application",
   "comment" : ""
 }, {
   "message" : "Connection/Credential Alias",
@@ -37,13 +67,31 @@
   "message" : "Script Snippet",
   "comment" : ""
 }, {
+  "message" : "Step Type",
+  "comment" : ""
+}, {
+  "message" : "Sys ID of the application",
+  "comment" : ""
+}, {
   "message" : "Sys ID of the connection/credential alias",
+  "comment" : ""
+}, {
+  "message" : "Sys ID of the step used by the actions",
+  "comment" : ""
+}, {
+  "message" : "Sys ID of the table used by the actions",
+  "comment" : ""
+}, {
+  "message" : "Table",
   "comment" : ""
 } ]</required_translations>
         <schema_version>1.0.0</schema_version>
         <script><![CDATA[function transform(input) {
+	var application = input.application;
+	var step_type = input.step_type;
 	var connection_cred_id = input.connection_cred_id;
 	var script_snippet = input.script_snippet;
+	var used_table = input.used_table;
 
 	var output = {
 		"query": ""
@@ -51,29 +99,96 @@
 
 	var actions = new GlideRecord("sys_hub_action_type_definition");
 	actions.orderBy("name");
-	if (!connection_cred_id && !script_snippet) {
+	if (!application && !connection_cred_id && !script_snippet && !used_table && !step_type) {
 		output.query = actions.getEncodedQuery();
 	}
 
+	if (application) {
+		actions.addQuery("sys_scope", application);
+	}
+
 	var variableValues = new GlideRecord("sys_variable_value");
-	var usedValues = [];
+	var usedStepInstances = [];
 	if (connection_cred_id) {
-		usedValues = [];
-		variableValues.addQuery("document=sys_hub_step_instance^variable.labelLIKEcredential alias^ORvariable.labelLIKEconnection alias^value=" + connection_cred_id);
+		usedStepInstances = [];
+		variableValues.initialize();
+		variableValues.addQuery("document=sys_hub_step_instance^variable.label=credential alias^ORvariable.label=connection alias^value=" + connection_cred_id);
 		variableValues.query();
 		var actionsUsingGivenAlias = [];
 		while (variableValues.next()) {
-			if (usedValues.indexOf(variableValues.getUniqueValue()) > -1) {
+			if (usedStepInstances.indexOf(variableValues.document_key.toString()) > -1) {
 				continue;
 			}
 
 			if (variableValues.document_key.action.sys_class_name == "sys_hub_action_type_definition") {
 				actionsUsingGivenAlias.push(variableValues.document_key.action);
-				usedValues.push(variableValues.getUniqueValue());
+				usedStepInstances.push(variableValues.document_key.toString());
 			}
 		}
 
 		actions.addQuery("sys_idIN" + actionsUsingGivenAlias);
+	}
+
+	if (script_snippet) {
+		usedStepInstances = [];
+		output.script_snippet = script_snippet;
+		var query = "document=sys_hub_step_instance^variable.label=script";
+		var snippetLines = script_snippet.split("\n");
+		for (var l in snippetLines) {
+			query += "^valueLIKE" + snippetLines[l].trim();
+		}
+		variableValues.initialize();
+		variableValues.addQuery(query);
+		variableValues.query();
+		var actionsUsingSnippet = [];
+		while (variableValues.next()) {
+			if (usedStepInstances.indexOf(variableValues.document_key.toString()) > -1) {
+				continue;
+			}
+
+			if (variableValues.document_key.action.sys_class_name == "sys_hub_action_type_definition") {
+				actionsUsingSnippet.push(variableValues.document_key.action);
+				usedStepInstances.push(variableValues.document_key.toString());
+			}
+		}
+
+		actions.addQuery("sys_idIN" + actionsUsingSnippet);
+	}
+
+	if (used_table) {
+		usedStepInstances = [];
+		var actionsUsingTable = [];
+		var tables = new GlideRecord("sys_db_object");
+		if (tables.get(used_table)) {
+			output.used_table = tables.getValue("name");
+			variableValues.initialize();
+			variableValues.addQuery("document=sys_hub_step_instance^variable.labelLIKEtable^value=" + output.used_table);
+			variableValues.query();
+			while (variableValues.next()) {
+				if (usedStepInstances.indexOf(variableValues.document_key.toString()) > -1) {
+					continue;
+				}
+
+				if (variableValues.document_key.action.sys_class_name == "sys_hub_action_type_definition") {
+					actionsUsingTable.push(variableValues.document_key.action);
+					usedStepInstances.push(variableValues.document_key.toString());
+				}
+			}
+		}
+		actions.addQuery("sys_idIN" + actionsUsingTable);
+	}
+
+	if (step_type) {
+		var stepInstances = new GlideRecord("sys_hub_step_instance");
+		stepInstances.addQuery("actionISNOTEMPTY^action.sys_class_name=sys_hub_action_type_definition^step_type=" + step_type);
+		stepInstances.query();
+		var actionsUsingStep = [];
+		while (stepInstances.next()) {
+			if (actionsUsingStep.indexOf(stepInstances.getValue("action"))) {
+				actionsUsingStep.push(stepInstances.getValue("action"));
+			}
+		}
+		actions.addQuery("sys_idIN" + actionsUsingStep);
 	}
 
 	output.query = actions.getEncodedQuery();
@@ -83,14 +198,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-07-24 14:09:00</sys_created_on>
         <sys_id>2be6d16897943110974bbf1e6253af56</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>15</sys_mod_count>
         <sys_name>Action Search Data Broker</sys_name>
         <sys_package display_value="Flow Finder" source="x_350851_flow_fi_0">18d672eb97132110974bbf1e6253afc8</sys_package>
         <sys_policy/>
         <sys_scope display_value="Flow Finder">18d672eb97132110974bbf1e6253afc8</sys_scope>
         <sys_update_name>sys_ux_data_broker_transform_2be6d16897943110974bbf1e6253af56</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-07-31 14:52:51</sys_updated_on>
+        <sys_updated_on>2023-08-01 14:49:41</sys_updated_on>
     </sys_ux_data_broker_transform>
     <sys_translated_text action="delete_multiple" query="documentkey=2be6d16897943110974bbf1e6253af56"/>
 </record_update>
